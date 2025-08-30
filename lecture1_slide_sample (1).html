@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第1回講義：私の美容ビジネス適性発見</title>
+    <style>
+        body {
+            font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .slide {
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            background: white;
+            margin-bottom: 2px;
+            position: relative;
+            overflow-y: auto;
+        }
+        .slide h1 {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .slide h2 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            margin-bottom: 1rem;
+            color: #e74c3c;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        .slide h3 {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            margin-bottom: 0.8rem;
+            color: #3498db;
+        }
+        .slide p, .slide li {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            line-height: 1.6;
+            margin-bottom: 0.8rem;
+        }
+        .goal-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            width: 100%;
+            max-width: 800px;
+        }
+        .content-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #3498db;
+            width: 100%;
+            max-width: 800px;
+        }
+        .why-section {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #e67e22;
+            width: 100%;
+            max-width: 900px;
+        }
+        .hint-section {
+            background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #9b59b6;
+            width: 100%;
+            max-width: 900px;
+        }
+        .time-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #e74c3c;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            font-weight: bold;
+        }
+        .step-number {
+            background: #3498db;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+        ul {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .emoji {
+            font-size: 2rem;
+            margin-right: 10px;
+        }
+        .highlight {
+            background: linear-gradient(transparent 60%, #ffeb3b 60%);
+            padding: 2px 4px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- スライド1: タイトル -->
+    <div class="slide">
+        <h1>🌟 第1回講義 🌟</h1>
+        <h2>「私の美容ビジネス適性」発見ワークショップ</h2>
+        <div class="goal-box">
+            <h3>📋 今日のゴール</h3>
+            <p>自分の美容への情熱を<span class="highlight">構造化・言語化</span>し、<br>
+            将来のキャリア選択に活かせる<span class="highlight">自己理解</span>を深める</p>
+        </div>
+        <p style="font-size: 1.2rem; margin-top: 30px;">
+            💡 単なる「美容が好き」から<br>
+            「私ならではの美容ビジネス適性」を発見しよう！
+        </p>
+    </div>
+
+    <!-- スライド2: 全体の流れ -->
+    <div class="slide">
+        <h2>📅 今日の流れ（120分）</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1000px; width: 100%;">
+            <div class="content-section">
+                <div class="step-number">1</div>
+                <h3>前半（50分）</h3>
+                <p><strong>想いの構造化・言語化</strong></p>
+                <ul style="font-size: clamp(1rem, 2vw, 1.2rem);">
+                    <li>過去の成功体験棚卸し</li>
+                    <li>情熱の要素分解</li>
+                </ul>
+            </div>
+            <div class="content-section">
+                <div class="step-number">2</div>
+                <h3>中盤（40分）</h3>
+                <p><strong>事業化適性の発見</strong></p>
+                <ul style="font-size: clamp(1rem, 2vw, 1.2rem);">
+                    <li>ビジネス適性チェック</li>
+                    <li>サロンオーナーシミュレーション</li>
+                </ul>
+            </div>
+            <div class="content-section">
+                <div class="step-number">3</div>
+                <h3>後半（30分）</h3>
+                <p><strong>将来像の多様性理解</strong></p>
+                <ul style="font-size: clamp(1rem, 2vw, 1.2rem);">
+                    <li>キャリアパターン紹介</li>
+                    <li>気づきの整理</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- スライド3: 前半部開始 -->
+    <div class="slide">
+        <div class="time-badge">前半 50分</div>
+        <h2>🔍 前半：想いの構造化・言語化</h2>
+        <div class="why-section">
+            <h3><span class="emoji">🤔</span>なぜこれが必要なのか？</h3>
+            <p style="text-align: left;">
+                ✅ <strong>漠然とした「好き」を具体化</strong>：何が好きで、なぜ好きなのかを明確にする<br>
+                ✅ <strong>自分らしさの発見</strong>：他の人とは違う、自分ならではの価値を見つける<br>
+                ✅ <strong>キャリア選択の基盤</strong>：将来の方向性を決める判断材料を整理する<br>
+                ✅ <strong>説得力のある自己PR</strong>：就活や開業時に「なぜ私が」を説明できる
+            </p>
+        </div>
+        <div class="content-section">
+            <p style="font-size: 1.6rem; color: #e74c3c;">
+                <strong>情熱 × 言語化 = 強力な武器</strong>
+            </p>
+        </div>
+    </div>
+
+    <!-- スライド4: 過去の成功体験棚卸し -->
+    <div class="slide">
+        <div class="time-badge">20分</div>
+        <h2>📝 ①過去の成功体験棚卸し</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">💡</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>成功パターンの発見</strong>：自分がどんな時に成果を出せるかを知る<br>
+                • <strong>喜びのポイント特定</strong>：何に最も価値を感じるかを明確にする<br>
+                • <strong>強みの可視化</strong>：無意識の能力や特徴を意識化する
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">✨</span>やり方のヒント</h3>
+            <ul style="text-align: left;">
+                <li><strong>時系列で思い出す</strong>：中学→高校→専門学校の順で振り返る</li>
+                <li><strong>小さな成功も大切に</strong>：「ちょっと褒められた」レベルでもOK</li>
+                <li><strong>4つの視点で分析</strong>：
+                    <ul style="font-size: 1.2rem; margin-top: 10px;">
+                        <li>🎯 <strong>自分が何をしたか</strong>（行動・技術・工夫）</li>
+                        <li>😊 <strong>相手がどう変わったか</strong>（表情・言葉・態度）</li>
+                        <li>💖 <strong>自分がどう感じたか</strong>（嬉しさ・達成感・驚き）</li>
+                        <li>🔄 <strong>なぜうまくいったか</strong>（成功要因の推測）</li>
+                    </ul>
+                </li>
+                <li><strong>具体的に書く</strong>：「喜んでくれた」→「笑顔で『ありがとう！』と3回言ってくれた」</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- スライド5: 情熱の要素分解 -->
+    <div class="slide">
+        <div class="time-badge">30分</div>
+        <h2>🧩 ②情熱の要素分解</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">🎯</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>情熱の正体解明</strong>：「美容が好き」の中身を詳細に分析<br>
+                • <strong>適性の客観視</strong>：好きなこと≠得意なことを区別して理解<br>
+                • <strong>価値観の明確化</strong>：何を大切にして働きたいかを特定<br>
+                • <strong>社会貢献の方向性</strong>：自分の力をどう活かすかを考える
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">🔍</span>4つの要素分析のヒント</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; text-align: left; width: 100%;">
+                <div>
+                    <h4>💝 好きなこと</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                        <li>技術面：メイク？ヘア？ネイル？</li>
+                        <li>工程面：カウンセリング？施術？仕上げ？</li>
+                        <li>瞬間面：変身の瞬間？お客様の笑顔？</li>
+                    </ul>
+                    
+                    <h4>⭐ 得意なこと</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                        <li>技術面：同級生より上手なこと</li>
+                        <li>対人面：話しやすさ？聞き上手？</li>
+                        <li>感性面：色彩感覚？トレンド察知？</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>💎 価値観</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                        <li>美しさ追求？自信向上？癒し提供？</li>
+                        <li>個性重視？流行重視？</li>
+                        <li>丁寧さ？スピード？革新性？</li>
+                    </ul>
+                    
+                    <h4>🌟 役に立つこと</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                        <li>どんな人の？（年代・性別・職業）</li>
+                        <li>どんな問題を？（外見・内面・状況）</li>
+                        <li>どんな変化を？（見た目・気持ち・行動）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- スライド6: ワーク実施 -->
+    <div class="slide">
+        <h2>🚀 それでは実際にやってみましょう！</h2>
+        
+        <div class="content-section">
+            <h3>📱 使用ツール</h3>
+            <p>Google Forms「第1回ワークシート」<br>
+            スマホからアクセス可能です</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; width: 100%;">
+            <div class="hint-section">
+                <h3>⏰ タイムスケジュール</h3>
+                <ul style="text-align: left;">
+                    <li><strong>0-20分</strong>：過去の成功体験棚卸し</li>
+                    <li><strong>20-35分</strong>：情熱の要素分解</li>
+                    <li><strong>35-45分</strong>：グループ内シェア</li>
+                    <li><strong>45-50分</strong>：全体共有・質疑応答</li>
+                </ul>
+            </div>
+            <div class="hint-section">
+                <h3>💡 進行のコツ</h3>
+                <ul style="text-align: left;">
+                    <li>完璧を求めない</li>
+                    <li>思いつかなくても大丈夫</li>
+                    <li>他の人と比較しない</li>
+                    <li>素直な気持ちで記入</li>
+                    <li>分からなければ質問OK</li>
+                </ul>
+            </div>
+        </div>
+
+        <p style="font-size: clamp(1.2rem, 3vw, 1.8rem); color: #e74c3c; margin-top: 20px;">
+            <strong>自分らしさを発見する旅の始まりです！</strong>
+        </p>
+    </div>
+
+    <!-- === 中盤開始 === -->
+    
+    <!-- スライド7: 中盤部開始 -->
+    <div class="slide">
+        <div class="time-badge">中盤 40分</div>
+        <h2>🎯 中盤：事業化適性の発見</h2>
+        <div class="why-section">
+            <h3><span class="emoji">🤔</span>なぜこれが必要なのか？</h3>
+            <p style="text-align: left;">
+                ✅ <strong>現実的な自己評価</strong>：情熱だけでなく、事業運営への適性も知る<br>
+                ✅ <strong>不安の可視化</strong>：漠然とした不安を具体的な課題として整理<br>
+                ✅ <strong>成長ポイント発見</strong>：今足りない部分を明確にして学習計画を立てる<br>
+                ✅ <strong>キャリア選択の判断材料</strong>：独立・就職・フリーランスを選ぶ基準作り
+            </p>
+        </div>
+        <div class="content-section">
+            <p style="font-size: clamp(1.2rem, 3vw, 1.6rem); color: #e74c3c;">
+                <strong>情熱 × 現実的視点 = 成功への近道</strong>
+            </p>
+        </div>
+    </div>
+
+    <!-- スライド8: ビジネス適性チェック -->
+    <div class="slide">
+        <div class="time-badge">20分</div>
+        <h2>📊 ③ビジネス適性チェック</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">💡</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>客観的自己理解</strong>：感情ではなく行動パターンで適性を判断<br>
+                • <strong>強み・弱みの把握</strong>：得意分野と成長が必要な分野を特定<br>
+                • <strong>リスク耐性の確認</strong>：事業運営で避けられないリスクへの向き合い方<br>
+                • <strong>学習優先順位決定</strong>：この講義で特に集中すべき分野を明確化
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">✨</span>診断のポイント</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; text-align: left; width: 100%;">
+                <div>
+                    <h4>🗣️ コミュニケーション</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                        <li>初対面の人と話すのは？</li>
+                        <li>相手の話を聞くのは得意？</li>
+                        <li>自分の考えを説明するのは？</li>
+                    </ul>
+                    
+                    <h4>📚 学習・成長</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                        <li>新しいことを覚えるのは好き？</li>
+                        <li>分からないことがあったらどうする？</li>
+                        <li>失敗から学ぶのは得意？</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>⚡ 判断・決断</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                        <li>決断するのは早い？遅い？</li>
+                        <li>責任を持つのは得意？苦手？</li>
+                        <li>プレッシャーは好き？嫌い？</li>
+                    </ul>
+                    
+                    <h4>💰 お金・数字</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                        <li>お金の話に興味はある？</li>
+                        <li>計算・数字は得意？苦手？</li>
+                        <li>家計管理はできている？</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- スライド9: サロンオーナーシミュレーション -->
+    <div class="slide">
+        <div class="time-badge">20分</div>
+        <h2>🎭 ④「もし明日サロンオーナーになったら」シミュレーション</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">🎯</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>リアルな想像力</strong>：具体的な場面を想像して適性を確認<br>
+                • <strong>感情の把握</strong>：ワクワクする？不安になる？の素直な反応を知る<br>
+                • <strong>優先順位の発見</strong>：何から手をつけたくなるかで価値観が見える<br>
+                • <strong>課題の先取り</strong>：実際に直面する問題を事前に想像・準備
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">🎬</span>シミュレーション設定</h3>
+            <div class="content-section">
+                <p style="font-size: clamp(1.1rem, 2.5vw, 1.3rem); text-align: left;">
+                    <strong>📋 設定：</strong><br>
+                    「先輩が急に海外転勤になり、明日からあなたが小さなサロンを任されることに！
+                    スタッフ1人、既存のお客様20人、毎月の家賃・光熱費10万円。
+                    技術は一通りできるけど、経営は初心者。さあ、どうする？」
+                </p>
+            </div>
+            
+            <h4>🤔 考えてもらう質問</h4>
+            <ul style="text-align: left; font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                <li><strong>まず最初に何をする？</strong>（行動の優先順位）</li>
+                <li><strong>一番ワクワクすることは？</strong>（興味・情熱の方向）</li>
+                <li><strong>一番不安なことは？</strong>（苦手分野・課題の発見）</li>
+                <li><strong>3ヶ月後、どんなサロンにしたい？</strong>（ビジョン・目標設定力）</li>
+                <li><strong>困った時、誰に相談する？</strong>（サポート体制・人間関係）</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- === 後半開始 === -->
+    
+    <!-- スライド10: 後半部開始 -->
+    <div class="slide">
+        <div class="time-badge">後半 30分</div>
+        <h2>🌈 後半：将来像の多様性理解</h2>
+        <div class="why-section">
+            <h3><span class="emoji">🤔</span>なぜこれが必要なのか？</h3>
+            <p style="text-align: left;">
+                ✅ <strong>選択肢の可視化</strong>：独立だけでない、多様なキャリアパスを知る<br>
+                ✅ <strong>プレッシャーの軽減</strong>：「今決めなきゃ」から「選択肢がある」へ<br>
+                ✅ <strong>共通スキルの認識</strong>：どの道でも経営知識が武器になることを理解<br>
+                ✅ <strong>学習モチベーション向上</strong>：明確な目標があると学習効果が上がる
+            </p>
+        </div>
+        <div class="content-section">
+            <p style="font-size: clamp(1.2rem, 3vw, 1.6rem); color: #e74c3c;">
+                <strong>多様な道 × 共通スキル = 無限の可能性</strong>
+            </p>
+        </div>
+    </div>
+
+    <!-- スライド11: キャリアパターン紹介 -->
+    <div class="slide">
+        <div class="time-badge">15分</div>
+        <h2>🛤️ ⑤美容業界のキャリアパターン</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">💡</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>視野の拡大</strong>：知らなかった選択肢・可能性を発見<br>
+                • <strong>適性マッチング</strong>：自分の特性に合うキャリアパスを見つける<br>
+                • <strong>成功イメージ</strong>：具体的な将来像を描けるようになる<br>
+                • <strong>経営知識の必要性理解</strong>：どの道でも今日の学びが活かされることを確認
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">🌟</span>5つのキャリアパターン</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; width: 100%;">
+                <div class="content-section">
+                    <h4>🎨 技術者コース</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <strong>特徴：</strong>技術を極め、一流の職人として活躍<br>
+                        <strong>経営知識：</strong>個人ブランディング、価格設定<br>
+                        <strong>向いている人：</strong>技術向上が何より楽しい
+                    </p>
+                </div>
+                <div class="content-section">
+                    <h4>👑 経営者コース</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <strong>特徴：</strong>サロン経営、複数店舗展開<br>
+                        <strong>経営知識：</strong>すべて必須！特に数字・人材管理<br>
+                        <strong>向いている人：</strong>チーム作り、仕組み作りが好き
+                    </p>
+                </div>
+                <div class="content-section">
+                    <h4>✨ フリーランスコース</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <strong>特徴：</strong>個人ブランドで独立活動<br>
+                        <strong>経営知識：</strong>マーケティング、顧客管理<br>
+                        <strong>向いている人：</strong>自由度高く働きたい
+                    </p>
+                </div>
+                <div class="content-section">
+                    <h4>🏢 企業コース</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <strong>特徴：</strong>美容メーカー、商品開発<br>
+                        <strong>経営知識：</strong>マーケティング、事業企画<br>
+                        <strong>向いている人：</strong>大きなプロジェクトに関わりたい
+                    </p>
+                </div>
+                <div class="content-section">
+                    <h4>📚 教育コース</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <strong>特徴：</strong>スクール講師、技術指導<br>
+                        <strong>経営知識：</strong>カリキュラム設計、生徒管理<br>
+                        <strong>向いている人：</strong>人を育てるのが好き
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- スライド12: 気づきの整理 -->
+    <div class="slide">
+        <div class="time-badge">15分</div>
+        <h2>📝 ⑥「今日の気づき」整理</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">🎯</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>学習の定着</strong>：体験したことを言語化して記憶に残す<br>
+                • <strong>変化の認識</strong>：講義前後での自分の変化を確認<br>
+                • <strong>次回への準備</strong>：今日の発見を次回の企画作りに活かす<br>
+                • <strong>継続学習の動機づけ</strong>：もっと知りたいことを明確にする
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">📋</span>整理する4つのポイント</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; width: 100%;">
+                <div>
+                    <h4>💡 自分の情熱の正体</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        今日の作業で「美容が好き」の中身がより明確になったことを記録
+                    </p>
+                </div>
+                <div>
+                    <h4>😮 意外だった自分の一面</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        適性チェックやシミュレーションで発見した新しい自分
+                    </p>
+                </div>
+                <div>
+                    <h4>🌟 興味を持ったキャリア</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        5つのパターンで「これいいな」と感じたコースとその理由
+                    </p>
+                </div>
+                <div>
+                    <h4>🎓 特に学びたいこと</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        このカリキュラムで特に力を入れて学習したい分野
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h3>📱 記録方法</h3>
+            <p>Google Forms「第1回振り返りシート」で記録<br>
+            次回までにNotebookLMで深掘り学習も可能です！</p>
+        </div>
+    </div>
+
+    <!-- スライド13: 第1回まとめ -->
+    <div class="slide">
+        <h2>🎉 第1回のまとめ</h2>
+        
+        <div class="goal-box">
+            <h3>✅ 今日達成したこと</h3>
+            <ul style="text-align: left; font-size: clamp(1rem, 2.5vw, 1.2rem);">
+                <li>漠然とした「美容が好き」を具体的な4要素に分解</li>
+                <li>自分のビジネス適性を客観的にチェック</li>
+                <li>サロン経営のリアルな場面を想像体験</li>
+                <li>多様なキャリアパスとそれぞれの魅力を発見</li>
+                <li>この講義で学ぶべき優先順位を明確化</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h3>🔜 次回予告：第2回「私らしいサロン」企画体験</h3>
+            <p style="text-align: left;">
+                今日発見した<span class="highlight">あなたの適性・価値観・強み</span>を活かして、<br>
+                具体的なサロン企画を作ってみます！<br><br>
+                💡 事前課題：今日の気づきをもとに「どんなサロンが作りたいか」をぼんやり考えておいてください
+            </p>
+        </div>
+
+        <p style="font-size: clamp(1.3rem, 3.5vw, 2rem); color: #e74c3c; margin-top: 20px;">
+            <strong>🌟 自分らしい美容ビジネスへの第一歩完了！🌟</strong>
+        </p>
+    </div>
+</body>
+</html>
