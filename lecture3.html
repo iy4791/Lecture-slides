@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第3回講義：お客様の心を読むマーケティング入門</title>
+    <style>
+        body {
+            font-family: 'Meiryo', 'メイリオ', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+            color: #333;
+        }
+        .slide {
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            background: white;
+            margin-bottom: 2px;
+            position: relative;
+            overflow-y: auto;
+        }
+        .slide h1 {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .slide h2 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            margin-bottom: 1rem;
+            color: #2E7D32;
+            border-bottom: 3px solid #2E7D32;
+            padding-bottom: 10px;
+        }
+        .slide h3 {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            margin-bottom: 0.8rem;
+            color: #4CAF50;
+        }
+        .slide p, .slide li {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            line-height: 1.6;
+            margin-bottom: 0.8rem;
+        }
+        .goal-box {
+            background: linear-gradient(135deg, #81C784 0%, #4CAF50 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            width: 100%;
+            max-width: 800px;
+        }
+        .content-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #4CAF50;
+            width: 100%;
+            max-width: 800px;
+        }
+        .why-section {
+            background: linear-gradient(135deg, #E8F5E8 0%, #C8E6C9 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #66BB6A;
+            width: 100%;
+            max-width: 900px;
+        }
+        .hint-section {
+            background: linear-gradient(135deg, #F1F8E9 0%, #DCEDC8 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #8BC34A;
+            width: 100%;
+            max-width: 900px;
+        }
+        .time-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #2E7D32;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            font-weight: bold;
+        }
+        .step-number {
+            background: #4CAF50;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+        ul {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .emoji {
+            font-size: 2rem;
+            margin-right: 10px;
+        }
+        .highlight {
+            background: linear-gradient(transparent 60%, #C8E6C9 60%);
+            padding: 2px 4px;
+            font-weight: bold;
+        }
+        .persona-box {
+            background: linear-gradient(135deg, #E8F5E8 0%, #F1F8E9 100%);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        .warning-section {
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #FF9800;
+            width: 100%;
+            max-width: 900px;
+        }
+        .method-box {
+            background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #2196F3;
+        }
+    </style>
+</head>
+<body>
+    <!-- スライド1: タイトル -->
+    <div class="slide">
+        <h1>🎯 第3回講義 🎯</h1>
+        <h2>「お客様の心を読む」マーケティング入門</h2>
+        <div class="goal-box">
+            <h3>📋 今日のゴール</h3>
+            <p>第2回で作成した<span class="highlight">サロン企画</span>をベースに、<br>
+            お客様のニーズ・インサイトを深く理解し、<br>
+            効果的な<span class="highlight">マーケティング戦略</span>を構築する</p>
+        </div>
+        <p style="font-size: clamp(1rem, 2.5vw, 1.2rem); margin-top: 20px;">
+            💡 「自分らしいサロン企画」から<br>
+            「選ばれるサロン戦略」へレベルアップ！
+        </p>
+    </div>
+
+    <!-- スライド2: 全体の流れ -->
+    <div class="slide">
+        <h2>📅 今日の流れ（120分）</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1000px; width: 100%;">
+            <div class="content-section">
+                <div class="step-number">1</div>
+                <h3>前半（40分）</h3>
+                <p><strong>顧客理解の基礎</strong></p>
+                <ul style="font-size: clamp(1rem, 2vw, 1.2rem);">
+                    <li>ペルソナ分析実践</li>
+                    <li>ニーズ vs インサイト発見</li>
+                    <li>カスタマージャーニー作成</li>
+                </ul>
+            </div>
+            <div class="content-section">
+                <div class="step-number">2</div>
+                <h3>中盤（40分）</h3>
+                <p><strong>マーケティング戦略設計</strong></p>
+                <ul style="font-size: clamp(1rem, 2vw, 1.2rem);">
+                    <li>4P分析（商品・価格・流通・販促）</li>
+                    <li>競合分析・差別化戦略</li>
+                    <li>集客チャネルの選択</li>
+                </ul>
+            </div>
+            <div class="content-section">
+                <div class="step-number">3</div>
+                <h3>後半（40分）</h3>
+                <p><strong>実行計画の策定</strong></p>
+                <ul style="font-size: clamp(1rem, 2vw, 1.2rem);">
+                    <li>マーケティングプラン作成</li>
+                    <li>効果測定方法の設定</li>
+                    <li>発表・フィードバック</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- スライド3: 前半部開始 -->
+    <div class="slide">
+        <div class="time-badge">前半 40分</div>
+        <h2>👥 前半：顧客理解の基礎</h2>
+        <div class="why-section">
+            <h3><span class="emoji">🤔</span>なぜ顧客理解が重要なのか？</h3>
+            <p style="text-align: left;">
+                ✅ <strong>的確なサービス設計</strong>：本当に求められているものを提供できる<br>
+                ✅ <strong>効率的な集客</strong>：興味のある人に正しいメッセージを届けられる<br>
+                ✅ <strong>価格設定の根拠</strong>：価値に見合った料金を堂々と設定できる<br>
+                ✅ <strong>長期関係の構築</strong>：一度のお客様ではなく、継続的な関係を作れる
+            </p>
+        </div>
+        <div class="content-section">
+            <p style="font-size: clamp(1.2rem, 3vw, 1.6rem); color: #2E7D32;">
+                <strong>技術 × 顧客理解 = 選ばれるサロン</strong>
+            </p>
+        </div>
+    </div>
+
+    <!-- スライド4: ペルソナ分析実践 -->
+    <div class="slide">
+        <div class="time-badge">15分</div>
+        <h2>🎭 ①ペルソナ分析実践</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">💡</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>具体的な顧客像の構築</strong>：「20代女性」ではなく「田中さん」として理解<br>
+                • <strong>共感の深化</strong>：その人の生活・感情に寄り添えるサービス設計<br>
+                • <strong>意思決定の明確化</strong>：迷った時に「田中さんならどう思う？」で判断<br>
+                • <strong>チーム内での共有</strong>：スタッフ全員が同じ顧客像を持てる
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">🔍</span>ペルソナ作成の5要素</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; width: 100%;">
+                <div>
+                    <h4>📊 基本データ</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                        <li>年齢・性別・職業</li>
+                        <li>収入・家族構成</li>
+                        <li>居住地・交通手段</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>🏃 ライフスタイル</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                        <li>平日・休日の過ごし方</li>
+                        <li>趣味・興味関心</li>
+                        <li>情報収集の方法</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>💭 価値観・悩み</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                        <li>美容に対する価値観</li>
+                        <li>現在の悩み・課題</li>
+                        <li>理想の状態</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>🛍️ 購買行動</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                        <li>美容にかける予算</li>
+                        <li>サロン選択の基準</li>
+                        <li>情報収集～決定までの流れ</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="persona-box">
+                <h4>📝 実践例：ペルソナ「田中恵美さん」</h4>
+                <p style="text-align: left; font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                    28歳、会社員（事務職）、年収350万円。平日は忙しく、休日は友人と過ごすことが多い。
+                    Instagram で美容情報をチェック。「手軽だけどちゃんと見える」メイクを求めている。
+                    月の美容予算は15,000円。価格より技術と時間効率を重視。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- スライド5: ニーズ vs インサイト発見 -->
+    <div class="slide">
+        <div class="time-badge">15分</div>
+        <h2>🧠 ②ニーズ vs インサイト発見</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">🎯</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>表面と深層の区別</strong>：言葉にされる要望と本音の違いを理解<br>
+                • <strong>競合差別化の源泉</strong>：インサイトに応えるサービスは真似されにくい<br>
+                • <strong>感情価値の創出</strong>：機能だけでなく感情に響くサービス設計<br>
+                • <strong>価格プレミアム</strong>：インサイトに応えるサービスは高単価を実現しやすい
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">🔍</span>ニーズとインサイトの違い</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; width: 100%;">
+                <div class="method-box">
+                    <h4>📢 ニーズ（表面的要望）</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <strong>特徴：</strong>お客様が言葉にできる要望<br>
+                        <strong>例：</strong>
+                        • 髪をカットしてほしい<br>
+                        • メイクを教えてほしい<br>
+                        • きれいになりたい<br>
+                        <strong>対応：</strong>技術的なサービス提供
+                    </p>
+                </div>
+                <div class="method-box">
+                    <h4>💭 インサイト（深層心理）</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <strong>特徴：</strong>お客様も気づいていない本当の欲求<br>
+                        <strong>例：</strong>
+                        • 自分に自信を持ちたい<br>
+                        • 忙しい中でも自分を大切にしたい<br>
+                        • 周りから認められたい<br>
+                        <strong>対応：</strong>感情・体験価値の提供
+                    </p>
+                </div>
+            </div>
+
+            <div class="warning-section">
+                <h4>💡 インサイト発見の質問テクニック</h4>
+                <ul style="text-align: left; font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                    <li><strong>「なぜ？」を3回繰り返す</strong>：「なぜきれいになりたい？」→「なぜ自信を持ちたい？」→「なぜ？」</li>
+                    <li><strong>理想の状態を聞く</strong>：「このサービスを受けた後、どうなっていたい？」</li>
+                    <li><strong>感情に焦点を当てる</strong>：「それができたら、どんな気持ちになる？」</li>
+                    <li><strong>他人の視点を聞く</strong>：「友人からどう見られたい？」</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- スライド6: カスタマージャーニー作成 -->
+    <div class="slide">
+        <div class="time-badge">10分</div>
+        <h2>🗺️ ③カスタマージャーニー作成</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">💡</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>全体体験の設計</strong>：来店前から来店後まで一貫した体験を提供<br>
+                • <strong>タッチポイントの最適化</strong>：各段階で最適なコミュニケーション<br>
+                • <strong>問題点の事前発見</strong>：お客様が躓きやすいポイントを先回り解決<br>
+                • <strong>感動ポイントの演出</strong>：期待を超える瞬間を戦略的に配置
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">🛤️</span>カスタマージャーニーの5段階</h3>
+            <div class="content-section">
+                <div style="text-align: left; font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                    <h4>1️⃣ 認知段階</h4>
+                    <p><strong>状況：</strong>悩みに気づく、解決方法を探し始める<br>
+                    <strong>行動：</strong>Google検索、SNS閲覧、友人に相談<br>
+                    <strong>感情：</strong>不安、期待、迷い<br>
+                    <strong>対策：</strong>SEO対策、SNS発信、口コミ施策</p>
+
+                    <h4>2️⃣ 検討段階</h4>
+                    <p><strong>状況：</strong>複数のサロンを比較検討<br>
+                    <strong>行動：</strong>HP閲覧、口コミチェック、料金比較<br>
+                    <strong>感情：</strong>慎重、不安、期待<br>
+                    <strong>対策：</strong>差別化ポイントの明確化、お客様の声掲載</p>
+
+                    <h4>3️⃣ 決定段階</h4>
+                    <p><strong>状況：</strong>予約を決意、サロンを選択<br>
+                    <strong>行動：</strong>予約システムの利用、電話連絡<br>
+                    <strong>感情：</strong>決断、少し不安<br>
+                    <strong>対策：</strong>予約のしやすさ、丁寧な事前説明</p>
+
+                    <h4>4️⃣ 体験段階</h4>
+                    <p><strong>状況：</strong>実際にサロンでサービス体験<br>
+                    <strong>行動：</strong>来店、カウンセリング、施術、支払い<br>
+                    <strong>感情：</strong>緊張、安心、満足、感動<br>
+                    <strong>対策：</strong>おもてなし、技術力、空間演出</p>
+
+                    <h4>5️⃣ 継続段階</h4>
+                    <p><strong>状況：</strong>サービス後の生活、再来店検討<br>
+                    <strong>行動：</strong>友人に報告、SNSに投稿、再予約検討<br>
+                    <strong>感情：</strong>満足、愛着、信頼<br>
+                    <strong>対策：</strong>アフターフォロー、リピート施策、紹介促進</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- === 中盤開始 === -->
+    
+    <!-- スライド7: 中盤部開始 -->
+    <div class="slide">
+        <div class="time-badge">中盤 40分</div>
+        <h2>📈 中盤：マーケティング戦略設計</h2>
+        <div class="why-section">
+            <h3><span class="emoji">🤔</span>なぜ戦略設計が重要なのか？</h3>
+            <p style="text-align: left;">
+                ✅ <strong>資源の効率的活用</strong>：限られた時間・予算・人材を最大効果で運用<br>
+                ✅ <strong>一貫性のある顧客体験</strong>：商品・価格・販促・流通が連動した価値提供<br>
+                ✅ <strong>競合との差別化</strong>：独自のポジションを確立して価格競争を回避<br>
+                ✅ <strong>成長の基盤構築</strong>：場当たり的でない、継続的な成長メカニズム
+            </p>
+        </div>
+        <div class="content-section">
+            <p style="font-size: clamp(1.2rem, 3vw, 1.6rem); color: #2E7D32;">
+                <strong>戦略 × 実行力 = 持続的成功</strong>
+            </p>
+        </div>
+    </div>
+
+    <!-- スライド8: 4P分析 -->
+    <div class="slide">
+        <div class="time-badge">15分</div>
+        <h2>🎯 ④4P分析（商品・価格・流通・販促）</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">💡</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>マーケティングミックスの最適化</strong>：4要素が相互補完する設計<br>
+                • <strong>顧客価値の最大化</strong>：お客様にとって魅力的で一貫した提案<br>
+                • <strong>収益性の確保</strong>：価値に見合った収益構造の構築<br>
+                • <strong>競合差別化の実現</strong>：独自のポジショニングの確立
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">🔍</span>4P分析の実践フレーム</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; width: 100%;">
+                <div class="method-box">
+                    <h4>💼 Product（商品）</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <li><strong>コアサービス</strong>：基本的な技術・施術</li>
+                        <li><strong>付加価値</strong>：カウンセリング、空間、体験</li>
+                        <li><strong>サービス品質</strong>：技術レベル、接客品質</li>
+                        <li><strong>差別化要素</strong>：他にない独自性</li>
+                    </ul>
+                </div>
+                <div class="method-box">
+                    <h4>💰 Price（価格）</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <li><strong>価格設定方針</strong>：高価格・中価格・低価格</li>
+                        <li><strong>価格構造</strong>：基本料金、オプション、セット割引</li>
+                        <li><strong>支払い方法</strong>：現金、カード、分割、サブスク</li>
+                        <li><strong>価格戦略</strong>：プレミアム、競争的、浸透価格</li>
+                    </ul>
+                </div>
+                <div class="method-box">
+                    <h4>🏪 Place（流通）</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <li><strong>立地選択</strong>：駅近、住宅街、商業施設内</li>
+                        <li><strong>店舗形態</strong>：固定店舗、出張、レンタルサロン</li>
+                        <li><strong>アクセス性</strong>：交通の便、駐車場、営業時間</li>
+                        <li><strong>予約システム</strong>：電話、Web、アプリ</li>
+                    </ul>
+                </div>
+                <div class="method-box">
+                    <h4>📢 Promotion（販促）</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                <div class="method-box">
+                    <h4>📢 Promotion（販促）</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <li><strong>広告宣伝</strong>：SNS、Web、チラシ、看板</li>
+                        <li><strong>PR活動</strong>：メディア露出、イベント参加</li>
+                        <li><strong>口コミ施策</strong>：紹介割引、レビュー促進</li>
+                        <li><strong>販促キャンペーン</strong>：新規割引、リピート特典</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="warning-section">
+                <h4>⚖️ 4Pの相互関係チェック</h4>
+                <ul style="text-align: left; font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                    <li><strong>整合性</strong>：高級サービス（Product）なのに低価格（Price）は矛盾</li>
+                    <li><strong>相乗効果</strong>：便利な立地（Place）なら時短サービス（Product）で差別化</li>
+                    <li><strong>ターゲット適合</strong>：全ての要素がペルソナのニーズに合致しているか</li>
+                    <li><strong>競合差別化</strong>：4要素の組み合わせで独自ポジションを構築</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- スライド9: 競合分析・差別化戦略 -->
+    <div class="slide">
+        <div class="time-badge">15分</div>
+        <h2>🏆 ⑤競合分析・差別化戦略</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">🎯</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>市場ポジションの確立</strong>：競合の隙間を狙った独自ポジション<br>
+                • <strong>価格競争の回避</strong>：価格以外の価値で勝負できる領域を発見<br>
+                • <strong>強みの活用</strong>：競合にない自分だけの強みを武器にする<br>
+                • <strong>学習機会の獲得</strong>：競合の成功・失敗から効率的に学ぶ
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">🔍</span>競合分析の3層構造</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; width: 100%;">
+                <div>
+                    <h4>🎯 直接競合</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <strong>定義：</strong>同じサービス・同じターゲット<br>
+                        <strong>例：</strong>近隣の同業サロン<br>
+                        <strong>分析項目：</strong><br>
+                        • 価格設定・サービス内容<br>
+                        • 技術レベル・接客品質<br>
+                        • 立地・営業時間<br>
+                        • 口コミ・評判
+                    </p>
+                </div>
+                <div>
+                    <h4>🔄 間接競合</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <strong>定義：</strong>異なる方法で同じニーズを満たす<br>
+                        <strong>例：</strong>セルフ美容商品、アプリ<br>
+                        <strong>分析項目：</strong><br>
+                        • 提供価値・利便性<br>
+                        • 価格・アクセス性<br>
+                        • 利用シーン・頻度<br>
+                        • トレンド・成長性
+                    </p>
+                </div>
+                <div>
+                    <h4>⏰ 潜在競合</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <strong>定義：</strong>顧客の時間・予算を奪う他業種<br>
+                        <strong>例：</strong>エステ、ジム、旅行<br>
+                        <strong>分析項目：</strong><br>
+                        • 顧客の優先順位<br>
+                        • 代替可能性<br>
+                        • 季節性・タイミング<br>
+                        • 魅力度・満足度
+                    </p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h4>🚀 差別化戦略の4パターン</h4>
+                <div style="text-align: left; font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                    <p><strong>1. 技術差別化</strong>：圧倒的な技術力・専門性で勝負</p>
+                    <p><strong>2. サービス差別化</strong>：接客・体験・付加価値で勝負</p>
+                    <p><strong>3. 利便性差別化</strong>：立地・時間・予約しやすさで勝負</p>
+                    <p><strong>4. コスト差別化</strong>：効率化によるコストパフォーマンスで勝負</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- スライド10: 集客チャネルの選択 -->
+    <div class="slide">
+        <div class="time-badge">10分</div>
+        <h2>📱 ⑥集客チャネルの選択</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">💡</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>効率的な顧客獲得</strong>：ターゲットがいる場所で適切なメッセージ<br>
+                • <strong>予算配分の最適化</strong>：効果の高いチャネルに資源を集中<br>
+                • <strong>持続的な集客基盤</strong>：一時的でない、継続的な顧客獲得システム<br>
+                • <strong>測定・改善体制</strong>：効果測定できるチャネルで PDCA を回す
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">📊</span>集客チャネルマップ</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; width: 100%;">
+                <div class="method-box">
+                    <h4>📱 デジタルチャネル</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <li><strong>SNS</strong>：Instagram、TikTok、YouTube</li>
+                        <li><strong>検索</strong>：Google、Yahoo（SEO/リスティング）</li>
+                        <li><strong>予約サイト</strong>：ホットペッパー、楽天</li>
+                        <li><strong>自社サイト</strong>：HP、ブログ、予約システム</li>
+                    </ul>
+                </div>
+                <div class="method-box">
+                    <h4>🏪 オフラインチャネル</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <li><strong>看板・店頭</strong>：通りがかりの認知獲得</li>
+                        <li><strong>チラシ・DM</strong>：地域密着型アプローチ</li>
+                        <li><strong>イベント</strong>：体験会、相談会</li>
+                        <li><strong>提携・紹介</strong>：他業種との連携</li>
+                    </ul>
+                </div>
+                <div class="method-box">
+                    <h4>👥 口コミチャネル</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <li><strong>顧客紹介</strong>：紹介制度・特典設計</li>
+                        <li><strong>レビュー</strong>：Google、口コミサイト</li>
+                        <li><strong>インフルエンサー</strong>：地域の有名人</li>
+                        <li><strong>コミュニティ</strong>：ママ友、職場ネットワーク</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="warning-section">
+                <h4>🎯 チャネル選択の判断基準</h4>
+                <ul style="text-align: left; font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                    <li><strong>ターゲット適合性</strong>：ペルソナがよく使うチャネルか？</li>
+                    <li><strong>費用対効果</strong>：投資額に見合った顧客獲得が期待できるか？</li>
+                    <li><strong>継続可能性</strong>：長期間運用できるリソースがあるか？</li>
+                    <li><strong>測定可能性</strong>：効果測定・改善ができるか？</li>
+                    <li><strong>競合状況</strong>：競合が少なく、差別化しやすいか？</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- === 後半開始 === -->
+    
+    <!-- スライド11: 後半部開始 -->
+    <div class="slide">
+        <div class="time-badge">後半 40分</div>
+        <h2>📋 後半：実行計画の策定</h2>
+        <div class="why-section">
+            <h3><span class="emoji">🤔</span>なぜ実行計画が重要なのか？</h3>
+            <p style="text-align: left;">
+                ✅ <strong>戦略の実行力向上</strong>：アイデアを具体的なアクションに変換<br>
+                ✅ <strong>進捗管理の仕組み</strong>：何を・いつまでに・誰が実行するかを明確化<br>
+                ✅ <strong>効果測定・改善</strong>：結果を測定し、PDCAサイクルを回す基盤<br>
+                ✅ <strong>チーム連携の強化</strong>：共通理解のもとで一致団結した実行
+            </p>
+        </div>
+        <div class="content-section">
+            <p style="font-size: clamp(1.2rem, 3vw, 1.6rem); color: #2E7D32;">
+                <strong>計画 × 実行 × 改善 = マーケティング成功</strong>
+            </p>
+        </div>
+    </div>
+
+    <!-- スライド12: マーケティングプラン作成 -->
+    <div class="slide">
+        <div class="time-badge">20分</div>
+        <h2>📝 ⑦マーケティングプラン作成</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">🎯</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>戦略の具体化</strong>：抽象的なアイデアを実行可能なプランに変換<br>
+                • <strong>優先順位の明確化</strong>：限られたリソースを最重要課題に集中<br>
+                • <strong>スケジュール管理</strong>：いつ何をするかの時系列計画<br>
+                • <strong>成果予測</strong>：期待される効果と必要な投資の見積もり
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">📊</span>マーケティングプランの構成要素</h3>
+            
+            <div class="content-section">
+                <h4>🎯 1. 目標設定（SMART原則）</h4>
+                <ul style="text-align: left; font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                    <li><strong>Specific（具体的）</strong>：「集客を増やす」→「新規顧客を月20人獲得」</li>
+                    <li><strong>Measurable（測定可能）</strong>：数値で測定できる指標</li>
+                    <li><strong>Achievable（達成可能）</strong>：現実的で実現可能な目標</li>
+                    <li><strong>Relevant（関連性）</strong>：事業目標と関連した意味のある目標</li>
+                    <li><strong>Time-bound（期限付き）</strong>：明確な達成期限を設定</li>
+                </ul>
+            </div>
+
+            <div class="method-box">
+                <h4>📅 2. アクションプラン（3ヶ月計画例）</h4>
+                <div style="text-align: left; font-size: clamp(0.9rem, 2vw, 1rem);">
+                    <p><strong>Month 1: 基盤構築</strong></p>
+                    <ul>
+                        <li>Instagram アカウント開設・コンテンツ作成</li>
+                        <li>Google マイビジネス登録・最適化</li>
+                        <li>紹介制度設計・既存顧客への告知</li>
+                    </ul>
+                    
+                    <p><strong>Month 2: 認知拡大</strong></p>
+                    <ul>
+                        <li>SNS 投稿継続（週3回）</li>
+                        <li>地域イベント参加・体験会開催</li>
+                        <li>口コミ促進キャンペーン実施</li>
+                    </ul>
+                    
+                    <p><strong>Month 3: 効果測定・改善</strong></p>
+                    <ul>
+                        <li>各チャネルの効果分析</li>
+                        <li>顧客満足度調査実施</li>
+                        <li>次期戦略の策定</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="warning-section">
+                <h4>💰 3. 予算配分計画</h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left;">
+                    <div>
+                        <p><strong>広告宣伝費（月額5万円の例）</strong></p>
+                        <ul style="font-size: clamp(0.9rem, 2vw, 1rem);">
+                            <li>Instagram 広告：2万円</li>
+                            <li>Google 広告：1.5万円</li>
+                            <li>チラシ・DM：1万円</li>
+                            <li>イベント参加費：0.5万円</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p><strong>運用コスト（月額2万円の例）</strong></p>
+                        <ul style="font-size: clamp(0.9rem, 2vw, 1rem);">
+                            <li>予約システム：0.5万円</li>
+                            <li>撮影・素材作成：1万円</li>
+                            <li>紹介特典費：0.5万円</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- スライド13: 効果測定方法の設定 -->
+    <div class="slide">
+        <div class="time-badge">10分</div>
+        <h2>📈 ⑧効果測定方法の設定</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">💡</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>客観的な評価</strong>：感覚ではなく数値による成果判定<br>
+                • <strong>改善点の特定</strong>：何がうまくいき、何が課題かを明確化<br>
+                • <strong>投資判断の根拠</strong>：継続・拡大・中止の意思決定材料<br>
+                • <strong>学習サイクル</strong>：失敗も成功も次の戦略に活かす仕組み
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">📊</span>測定指標の3層構造</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; width: 100%;">
+                <div class="method-box">
+                    <h4>🎯 成果指標（Result）</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <li><strong>売上・利益</strong>：最終的な事業成果</li>
+                        <li><strong>新規顧客数</strong>：月間・週間の新規獲得数</li>
+                        <li><strong>リピート率</strong>：既存顧客の継続利用率</li>
+                        <li><strong>顧客単価</strong>：1回あたりの平均利用金額</li>
+                    </ul>
+                </div>
+                <div class="method-box">
+                    <h4>📈 活動指標（Process）</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <li><strong>集客数</strong>：各チャネルからの流入数</li>
+                        <li><strong>予約転換率</strong>：問い合わせから予約への転換</li>
+                        <li><strong>来店転換率</strong>：予約から実際の来店への転換</li>
+                        <li><strong>投稿・コンテンツ数</strong>：発信活動の量</li>
+                    </ul>
+                </div>
+                <div class="method-box">
+                    <h4>💝 満足度指標（Quality）</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <li><strong>顧客満足度</strong>：アンケート・評価スコア</li>
+                        <li><strong>口コミ評価</strong>：Google・SNS での評価</li>
+                        <li><strong>紹介発生数</strong>：既存顧客からの紹介数</li>
+                        <li><strong>SNS エンゲージメント</strong>：いいね・コメント・シェア</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h4>🔄 PDCA サイクルの実践</h4>
+                <div style="text-align: left; font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                    <p><strong>Plan（計画）</strong>：目標・戦略・具体的アクションの設定</p>
+                    <p><strong>Do（実行）</strong>：計画に基づいた実際のマーケティング活動</p>
+                    <p><strong>Check（評価）</strong>：設定した指標による効果測定・分析</p>
+                    <p><strong>Action（改善）</strong>：結果をもとにした戦略・戦術の修正</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- スライド14: 発表・フィードバック -->
+    <div class="slide">
+        <div class="time-badge">10分</div>
+        <h2>🎤 ⑨発表・フィードバック</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">🎯</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>プレゼン力向上</strong>：マーケティング戦略を分かりやすく説明<br>
+                • <strong>多角的視点の獲得</strong>：他者の意見で戦略の盲点を発見<br>
+                • <strong>相互学習</strong>：他のマーケティングアイデアから刺激を受ける<br>
+                • <strong>実行意欲の向上</strong>：発表により自分の戦略への責任感を強化
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">📢</span>効果的なプレゼンテーション</h3>
+            
+            <div class="content-section">
+                <h4>⏰ 3分間プレゼンの構成</h4>
+                <ul style="text-align: left; font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                    <li><strong>0-30秒：</strong>ターゲット・課題の明確化「○○な人が△△で困っている」</li>
+                    <li><strong>30-90秒：</strong>解決策・差別化「私たちは□□で解決します」</li>
+                    <li><strong>90-150秒：</strong>マーケティング戦略「◇◇の方法で集客します」</li>
+                    <li><strong>150-180秒：</strong>期待効果・目標「◯ヶ月で××を達成予定」</li>
+                </ul>
+            </div>
+
+            <div class="method-box">
+                <h4>👥 フィードバックのポイント</h4>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left;">
+                    <div>
+                        <p><strong>聞く側の視点</strong></p>
+                        <ul style="font-size: clamp(0.9rem, 2vw, 1rem);">
+                            <li>顧客として魅力的か？</li>
+                            <li>戦略は実現可能か？</li>
+                            <li>競合に対して優位性があるか？</li>
+                            <li>改善提案できる点は？</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p><strong>発表者の学び</strong></p>
+                        <ul style="font-size: clamp(0.9rem, 2vw, 1rem);">
+                            <li>分かりにくかった部分</li>
+                            <li>想定していなかった視点</li>
+                            <li>改善すべき戦略要素</li>
+                            <li>次のアクションステップ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- スライド15: 第3回まとめ -->
+    <div class="slide">
+        <h2>🎉 第3回のまとめ</h2>
+        
+        <div class="goal-box">
+            <h3>✅ 今日達成したこと</h3>
+            <ul style="text-align: left; font-size: clamp(1rem, 2.5vw, 1.2rem);">
+                <li>ペルソナ分析でターゲット顧客を具体的に理解</li>
+                <li>ニーズとインサイトの違いを把握し、深層心理にアプローチ</li>
+                <li>カスタマージャーニーで全体体験を設計</li>
+                <li>4P分析で一貫性のあるマーケティングミックスを構築</li>
+                <li>競合分析により独自ポジションを確立</li>
+                <li>効果測定可能なマーケティングプランを策定</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h3>🔜 次回予告：第4回「価値の見える化」ブランディング実践</h3>
+            <p style="text-align: left;">
+                今回構築した<span class="highlight">マーケティング戦略</span>をベースに、<br>
+                ブランドアイデンティティの構築と<br>
+                視覚的・感覚的なブランド表現を学習します。<br><br>
+                💡 事前課題：自分のサロンの「らしさ」を表現する言葉・色・イメージを考えてきてください
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3>🏠 マーケティング戦略をさらに深めるには</h3>
+            <ul style="text-align: left; font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                <li><strong>実地調査</strong>：競合店の実際の訪問・サービス体験</li>
+                <li><strong>ターゲットヒアリング</strong>：ペルソナに近い人への直接インタビュー</li>
+                <li><strong>小規模テスト</strong>：SNS投稿やイベント参加で反応を確認</li>
+                <li><strong>数値シミュレーション</strong>：より精緻な収益・集客計画の作成</li>
+            </ul>
+        </div>
+
+        <p style="font-size: clamp(1.3rem, 3.5vw, 2rem); color: #2E7D32; margin-top: 20px;">
+            <strong>🌟 戦略的マーケティング思考の基礎完成！<br>次はブランドの世界へ！🌟</strong>
+        </p>
+    </div>
+</body>
+</html>
