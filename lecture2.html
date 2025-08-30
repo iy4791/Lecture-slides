@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第2回講義：私らしいサロン企画体験</title>
+    <style>
+        body {
+            font-family: 'Hiragino Sans', 'Yu Gothic', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .slide {
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            background: white;
+            margin-bottom: 2px;
+            position: relative;
+            overflow-y: auto;
+        }
+        .slide h1 {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .slide h2 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            margin-bottom: 1rem;
+            color: #e74c3c;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        .slide h3 {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            margin-bottom: 0.8rem;
+            color: #3498db;
+        }
+        .slide p, .slide li {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            line-height: 1.6;
+            margin-bottom: 0.8rem;
+        }
+        .goal-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            width: 100%;
+            max-width: 800px;
+        }
+        .content-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #3498db;
+            width: 100%;
+            max-width: 800px;
+        }
+        .why-section {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #e67e22;
+            width: 100%;
+            max-width: 900px;
+        }
+        .hint-section {
+            background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #9b59b6;
+            width: 100%;
+            max-width: 900px;
+        }
+        .time-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #e74c3c;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            font-weight: bold;
+        }
+        .step-number {
+            background: #3498db;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+        ul {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .emoji {
+            font-size: 2rem;
+            margin-right: 10px;
+        }
+        .highlight {
+            background: linear-gradient(transparent 60%, #ffeb3b 60%);
+            padding: 2px 4px;
+            font-weight: bold;
+        }
+        .type-box {
+            background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 100%);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #2ecc71;
+        }
+        .warning-section {
+            background: linear-gradient(135deg, #ffb6c1 0%, #ffd1dc 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #e91e63;
+            width: 100%;
+            max-width: 900px;
+        }
+    </style>
+</head>
+<body>
+    <!-- スライド1: タイトル -->
+    <div class="slide">
+        <h1>🚀 第2回講義 🚀</h1>
+        <h2>「私らしいサロン」企画体験</h2>
+        <div class="goal-box">
+            <h3>🎯 今日のゴール</h3>
+            <p>第1回で発見した<span class="highlight">自分の適性・価値観・強み</span>を活かして、<br>
+            具体的で現実的な<span class="highlight">サロン事業企画</span>を作成し、<br>
+            戦略的思考と企画力を身につける</p>
+        </div>
+        <p style="font-size: clamp(1rem, 2.5vw, 1.2rem); margin-top: 20px;">
+            💡 前回の「自己理解」から<br>
+            今日は「事業企画」へレベルアップ！
+        </p>
+    </div>
+
+    <!-- スライド2: 全体の流れ -->
+    <div class="slide">
+        <h2>📅 今日の流れ（120分）</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1000px; width: 100%;">
+            <div class="content-section">
+                <div class="step-number">1</div>
+                <h3>前半（50分）</h3>
+                <p><strong>個人適性ベースの企画立案</strong></p>
+                <ul style="font-size: clamp(1rem, 2vw, 1.2rem);">
+                    <li>第1回振り返り・活用</li>
+                    <li>私ならではのサロンコンセプト設計</li>
+                    <li>ターゲット・提供価値の明確化</li>
+                </ul>
+            </div>
+            <div class="content-section">
+                <div class="step-number">2</div>
+                <h3>中盤（40分）</h3>
+                <p><strong>現実的事業設計</strong></p>
+                <ul style="font-size: clamp(1rem, 2vw, 1.2rem);">
+                    <li>場所・形態の戦略的選択</li>
+                    <li>収支計算・資金計画</li>
+                    <li>リスク・課題の想定</li>
+                </ul>
+            </div>
+            <div class="content-section">
+                <div class="step-number">3</div>
+                <h3>後半（30分）</h3>
+                <p><strong>企画書作成・共有</strong></p>
+                <ul style="font-size: clamp(1rem, 2vw, 1.2rem);">
+                    <li>企画書作成</li>
+                    <li>発表・フィードバック</li>
+                    <li>次回への準備</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- スライド3: 前半部開始 -->
+    <div class="slide">
+        <div class="time-badge">前半 50分</div>
+        <h2>🔄 前半：個人適性ベースの企画立案</h2>
+        <div class="why-section">
+            <h3><span class="emoji">🤔</span>なぜ適性ベースの企画が重要なのか？</h3>
+            <p style="text-align: left;">
+                ✅ <strong>継続可能性</strong>：自分らしさと合致していないと長続きしない<br>
+                ✅ <strong>差別化の源泉</strong>：個性こそが最強の競争優位性<br>
+                ✅ <strong>モチベーション維持</strong>：好き×得意だから困難も乗り越えられる<br>
+                ✅ <strong>説得力</strong>：お客様も投資家も「なぜあなたが？」に納得する
+            </p>
+        </div>
+        <div class="content-section">
+            <p style="font-size: clamp(1.2rem, 3vw, 1.6rem); color: #e74c3c;">
+                <strong>適性 × 戦略 = 成功する事業企画</strong>
+            </p>
+        </div>
+    </div>
+
+    <!-- スライド4: 第1回振り返り・活用 -->
+    <div class="slide">
+        <div class="time-badge">10分</div>
+        <h2>📋 ①第1回の振り返り・活用</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">💡</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>発見の再確認</strong>：前回の気づきを企画の土台として固める<br>
+                • <strong>成長の実感</strong>：1週間でどんな変化・深化があったかを確認<br>
+                • <strong>企画方向性の決定</strong>：どのタイプのサロンを企画するかを決める<br>
+                • <strong>チーム理解</strong>：他の人の適性も知って相互学習する
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">🔍</span>振り返りのポイント</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; width: 100%;">
+                <div>
+                    <h4>💎 私の4要素</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                        <li>好きなこと</li>
+                        <li>得意なこと</li>
+                        <li>価値観</li>
+                        <li>役に立ちたいこと</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>📊 ビジネス適性</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                        <li>最も高かった項目</li>
+                        <li>意外だった結果</li>
+                        <li>伸ばしたい分野</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>🌟 興味のあるキャリア</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                        <li>一番気になったコース</li>
+                        <li>その理由</li>
+                        <li>必要な準備</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- スライド5: サロンコンセプト設計 -->
+    <div class="slide">
+        <div class="time-badge">25分</div>
+        <h2>🎨 ②「私ならではのサロン」コンセプト設計</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">🎯</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>独自性の確立</strong>：他にはない「私だからできる」サロンを設計<br>
+                • <strong>一貫性の確保</strong>：すべてのサービス・体験が一つのコンセプトでつながる<br>
+                • <strong>決断基準の設定</strong>：迷った時に立ち返る「軸」を作る<br>
+                • <strong>情熱の具現化</strong>：抽象的な想いを具体的なサービスに変換
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">🎭</span>4つのサロンタイプから選択</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; width: 100%;">
+                <div class="type-box">
+                    <h4>🎨 技術特化型</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem);">
+                        「私の得意技術を極めたサロン」<br>
+                        <strong>例：</strong>カラーリング専門、眉毛デザイン専門
+                    </p>
+                </div>
+                <div class="type-box">
+                    <h4>💖 体験重視型</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem);">
+                        「お客様の感情・体験を大切にするサロン」<br>
+                        <strong>例：</strong>癒し空間、変身体験、自信回復
+                    </p>
+                </div>
+                <div class="type-box">
+                    <h4>👥 コミュニティ型</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem);">
+                        「人とのつながりを重視するサロン」<br>
+                        <strong>例：</strong>ママサロン、友達同士、世代交流
+                    </p>
+                </div>
+                <div class="type-box">
+                    <h4>⚡ イノベーション型</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem);">
+                        「新しいアプローチを提案するサロン」<br>
+                        <strong>例：</strong>AI診断活用、出張特化、オンライン併用
+                    </p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h4>📝 コンセプト設計の手順</h4>
+                <ol style="text-align: left; font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                    <li><strong>タイプ選択</strong>：自分の適性に最も合うタイプを1つ選ぶ</li>
+                    <li><strong>具体化</strong>：そのタイプで「何を」「どんな風に」提供するか</li>
+                    <li><strong>13字要約</strong>：サロンの魅力を13字以内で表現</li>
+                    <li><strong>ストーリー作り</strong>：なぜこのサロンを作りたいのかを語れるように</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- スライド6: ターゲット・提供価値の明確化 -->
+    <div class="slide">
+        <div class="time-badge">15分</div>
+        <h2>🎯 ③ターゲット・提供価値の明確化</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">💡</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>マーケティングの基盤</strong>：誰に何を売るかが明確でないと集客できない<br>
+                • <strong>サービス設計の指針</strong>：ターゲットが決まると必要な技術・設備が見える<br>
+                • <strong>価格設定の根拠</strong>：提供価値が明確だと適正価格を設定できる<br>
+                • <strong>競合との差別化</strong>：独自の価値提案で選ばれる理由を作る
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">🔍</span>3つの視点で深掘り</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; width: 100%;">
+                <div>
+                    <h4>🎯 だれに？</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1.1rem); text-align: left;">
+                        <li><strong>基本属性</strong>：年齢・性別・職業・収入</li>
+                        <li><strong>生活状況</strong>：忙しさ・住んでいる場所・家族構成</li>
+                        <li><strong>美容への関心</strong>：頻度・予算・重視するポイント</li>
+                        <li><strong>悩み・課題</strong>：外見・内面・時間・お金</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>💎 なにを？</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1.1rem); text-align: left;">
+                        <li><strong>表面的ニーズ</strong>：「きれいになりたい」</li>
+                        <li><strong>深層的インサイト</strong>：「自信を取り戻したい」</li>
+                        <li><strong>技術的価値</strong>：カット・カラー・メイクなど</li>
+                        <li><strong>感情的価値</strong>：癒し・変身・特別感など</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>⭐ なぜ私が？</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1.1rem); text-align: left;">
+                        <li><strong>技術的優位性</strong>：特別に得意な技術</li>
+                        <li><strong>経験的共感</strong>：同じ悩みを乗り越えた体験</li>
+                        <li><strong>人格的魅力</strong>：話しやすさ・安心感</li>
+                        <li><strong>環境的条件</strong>：立地・設備・価格</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- === 中盤開始 === -->
+    
+    <!-- スライド7: 中盤部開始 -->
+    <div class="slide">
+        <div class="time-badge">中盤 40分</div>
+        <h2>💰 中盤：現実的事業設計</h2>
+        <div class="why-section">
+            <h3><span class="emoji">🤔</span>なぜ現実的設計が重要なのか？</h3>
+            <p style="text-align: left;">
+                ✅ <strong>実現可能性の確認</strong>：夢物語ではなく実行できる計画にする<br>
+                ✅ <strong>リスクの事前把握</strong>：問題が起きてから慌てるのではなく事前に対策<br>
+                ✅ <strong>投資判断の基準</strong>：どこにどれだけお金をかけるべきかを決める<br>
+                ✅ <strong>成功確率の向上</strong>：数字とロジックで勝算を高める
+            </p>
+        </div>
+        <div class="content-section">
+            <p style="font-size: clamp(1.2rem, 3vw, 1.6rem); color: #e74c3c;">
+                <strong>情熱 × 現実的計画 = 成功する事業</strong>
+            </p>
+        </div>
+    </div>
+
+    <!-- スライド8: 場所・形態の戦略的選択 -->
+    <div class="slide">
+        <div class="time-badge">15分</div>
+        <h2>📍 ④場所・形態の戦略的選択</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">💡</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>ターゲットとの整合性</strong>：お客様が来やすい場所・形態を選ぶ<br>
+                • <strong>コスト最適化</strong>：初期投資と運営費を適正レベルに抑える<br>
+                • <strong>成長戦略の土台</strong>：将来の拡大を見据えた選択をする<br>
+                • <strong>リスク分散</strong>：1つの形態に依存しない柔軟性を持つ
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">🏢</span>3つの基本形態</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; width: 100%;">
+                <div class="type-box">
+                    <h4>🏪 固定店舗型</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <strong>メリット</strong>：信頼感、設備充実、リピート客<br>
+                        <strong>デメリット</strong>：家賃・初期費用高<br>
+                        <strong>向いてる人</strong>：安定志向、地域密着型
+                    </p>
+                </div>
+                <div class="type-box">
+                    <h4>🚗 出張型</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <strong>メリット</strong>：低コスト、お客様の利便性<br>
+                        <strong>デメリット</strong>：移動時間、設備制限<br>
+                        <strong>向いてる人</strong>：フットワーク軽い、特定技術特化
+                    </p>
+                </div>
+                <div class="type-box">
+                    <h4>🏢 レンタルサロン型</h4>
+                    <p style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <strong>メリット</strong>：初期費用抑制、立地柔軟性<br>
+                        <strong>デメリット</strong>：予約制約、設備統一困難<br>
+                        <strong>向いてる人</strong>：試行錯誤したい、複数拠点展開
+                    </p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h4>📍 立地選択のポイント</h4>
+                <ul style="text-align: left; font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                    <li><strong>ターミナル立地</strong>：通勤・通学途中、高い認知度、家賃高</li>
+                    <li><strong>住宅街立地</strong>：地域密着、リピート率高、集客に工夫必要</li>
+                    <li><strong>精神的距離</strong>：駅から5分＝お客様には15分の感覚</li>
+                    <li><strong>オンライン併用</strong>：カウンセリング・アフターフォローで差別化</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- スライド9: 収支計算・資金計画 -->
+    <div class="slide">
+        <div class="time-badge">15分</div>
+        <h2>💹 ⑤収支計算・資金計画</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">🎯</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>現実的な目標設定</strong>：「月100万売上」ではなく実現可能な数字<br>
+                • <strong>資金調達の根拠</strong>：銀行や投資家に説明できる計画<br>
+                • <strong>経営判断の基準</strong>：値上げ・コスト削減・投資のタイミング<br>
+                • <strong>税務・会計の基礎</strong>：開業後に困らない準備
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">📊</span>収支計算の基本構造</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; width: 100%;">
+                <div>
+                    <h4>💰 初期投資</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1.1rem); text-align: left;">
+                        <li>内装工事費：50-200万円</li>
+                        <li>設備・機器：30-100万円</li>
+                        <li>備品・消耗品：10-30万円</li>
+                        <li>保証金・礼金：家賃の6-12ヶ月分</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>📅 月間固定費</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1.1rem); text-align: left;">
+                        <li>家賃：売上の10-15%が目安</li>
+                        <li>光熱費：2-5万円</li>
+                        <li>通信費・保険：1-3万円</li>
+                        <li>広告宣伝費：売上の3-5%</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>⚖️ 変動費</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1.1rem); text-align: left;">
+                        <li>材料費：売上の5-10%</li>
+                        <li>人件費：売上の40-60%</li>
+                        <li>交通費（出張の場合）</li>
+                        <li>その他消耗品</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="warning-section">
+                <h4>⚠️ 忘れがちな費用・制度</h4>
+                <ul style="text-align: left; font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                    <li><strong>開業関連</strong>：開業届、青色申告承認申請（無料だが手続き必要）</li>
+                    <li><strong>税金関係</strong>：消費税（年商1000万超でインボイス必要）、所得税、住民税</li>
+                    <li><strong>社会保険</strong>：国民健康保険、国民年金（個人事業主）</li>
+                    <li><strong>各種保険</strong>：火災保険、賠償責任保険（年間3-10万円）</li>
+                    <li><strong>運転資金</strong>：最低3-6ヶ月分の固定費を確保</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- スライド10: リスク・課題の想定 -->
+    <div class="slide">
+        <div class="time-badge">10分</div>
+        <h2>⚠️ ⑥リスク・課題の想定</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">💡</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>事前準備</strong>：問題が起きてから考えるのではなく先手を打つ<br>
+                • <strong>資金計画の精緻化</strong>：余裕を持った資金調達計画を立てる<br>
+                • <strong>代替案の準備</strong>：プランBがあれば安心して挑戦できる<br>
+                • <strong>学習優先順位</strong>：何を今のうちに身につけておくべきかが分かる
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">🔍</span>想定すべき4つのリスク</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; width: 100%;">
+                <div class="warning-section">
+                    <h4>💸 資金面のリスク</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <li>想定より売上が上がらない</li>
+                        <li>初期費用が予算オーバー</li>
+                        <li>資金調達がうまくいかない</li>
+                    </ul>
+                </div>
+                <div class="warning-section">
+                    <h4>👥 顧客面のリスク</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <li>思ったより集客できない</li>
+                        <li>リピート率が低い</li>
+                        <li>クレーム・トラブル発生</li>
+                    </ul>
+                </div>
+                <div class="warning-section">
+                    <h4>🏢 運営面のリスク</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <li>スタッフが辞める・見つからない</li>
+                        <li>機器の故障・メンテナンス</li>
+                        <li>法的手続きの不備</li>
+                    </ul>
+                </div>
+                <div class="warning-section">
+                    <h4>🌪️ 外部環境のリスク</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <li>競合店の出現</li>
+                        <li>経済状況・消費動向の変化</li>
+                        <li>流行・トレンドの変化</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h4>🛡️ 対策の考え方</h4>
+                <ul style="text-align: left; font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                    <li><strong>回避</strong>：そのリスクが起きないようにする（例：十分な市場調査）</li>
+                    <li><strong>軽減</strong>：影響を小さくする（例：複数の収入源確保）</li>
+                    <li><strong>転嫁</strong>：保険や契約で対応（例：賠償責任保険加入）</li>
+                    <li><strong>受容</strong>：起きても対処できる準備（例：緊急資金の確保）</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- === 後半開始 === -->
+    
+    <!-- スライド11: 後半部開始 -->
+    <div class="slide">
+        <div class="time-badge">後半 30分</div>
+        <h2>📝 後半：企画書作成・共有</h2>
+        <div class="why-section">
+            <h3><span class="emoji">🤔</span>なぜ企画書作成が重要なのか？</h3>
+            <p style="text-align: left;">
+                ✅ <strong>思考の整理</strong>：頭の中のアイデアを論理的に構造化<br>
+                ✅ <strong>伝達力向上</strong>：他人に分かりやすく説明する力を身につける<br>
+                ✅ <strong>実行計画化</strong>：夢を現実的なアクションプランに変換<br>
+                ✅ <strong>フィードバック活用</strong>：他者の視点で企画をブラッシュアップ
+            </p>
+        </div>
+        <div class="content-section">
+            <p style="font-size: clamp(1.2rem, 3vw, 1.6rem); color: #e74c3c;">
+                <strong>企画 × 表現 × 共有 = 実現への道筋</strong>
+            </p>
+        </div>
+    </div>
+
+    <!-- スライド12: 企画書作成 -->
+    <div class="slide">
+        <div class="time-badge">15分</div>
+        <h2>📋 ⑦企画書作成</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">💡</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>論理的構成力</strong>：情報を整理して筋道立てて表現する<br>
+                • <strong>簡潔な表現力</strong>：A4一枚に要点を凝縮する技術<br>
+                • <strong>プレゼン準備</strong>：発表で使える資料として活用<br>
+                • <strong>実行計画の土台</strong>：実際の開業時に参照できるベース資料
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">📄</span>A4一枚企画書の構成</h3>
+            <div class="content-section">
+                <div style="text-align: left; font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                    <h4>📌 タイトル部分（上部20%）</h4>
+                    <ul>
+                        <li><strong>サロン名</strong>：覚えやすく、コンセプトが伝わるネーミング</li>
+                        <li><strong>13字キャッチフレーズ</strong>：「○○な人のための○○サロン」</li>
+                        <li><strong>作成者名・日付</strong></li>
+                    </ul>
+
+                    <h4>🎯 コンセプト部分（中部60%）</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        <ul>
+                            <li><strong>ターゲット</strong>：誰に？（3-4行）</li>
+                            <li><strong>提供価値</strong>：何を？なぜ私が？（3-4行）</li>
+                            <li><strong>サービス内容</strong>：具体的なメニュー（3-4行）</li>
+                        </ul>
+                        <ul>
+                            <li><strong>場所・形態</strong>：どこで？どんなスタイル？</li>
+                            <li><strong>価格設定</strong>：メイン商品の価格帯</li>
+                            <li><strong>差別化ポイント</strong>：他店との違い</li>
+                        </ul>
+                    </div>
+
+                    <h4>💰 数字部分（下部20%）</h4>
+                    <ul>
+                        <li><strong>初期投資</strong>：○○万円（主な内訳）</li>
+                        <li><strong>月間目標</strong>：売上○○万円、利益○○万円</li>
+                        <li><strong>損益分岐点</strong>：月○○人のお客様で黒字</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- スライド13: 発表・フィードバック -->
+    <div class="slide">
+        <div class="time-badge">15分</div>
+        <h2>🎤 ⑧発表・フィードバック</h2>
+        
+        <div class="why-section">
+            <h3><span class="emoji">🎯</span>この作業の目的</h3>
+            <p style="text-align: left;">
+                • <strong>プレゼン力向上</strong>：自分のアイデアを魅力的に伝える技術<br>
+                • <strong>客観的評価</strong>：作り手では気づかない視点・問題点の発見<br>
+                • <strong>相互学習</strong>：他の人のアイデアから新しい発想を得る<br>
+                • <strong>改善点の特定</strong>：次のステップで何をすべきかが明確になる
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3><span class="emoji">📢</span>発表の進行方法</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; width: 100%;">
+                <div class="content-section">
+                    <h4>⏰ 時間配分</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <li>発表：2分</li>
+                        <li>質疑応答：1分</li>
+                        <li>フィードバック記録：30秒</li>
+                        <li>1人あたり3-4分で5-6人発表</li>
+                    </ul>
+                </div>
+                <div class="content-section">
+                    <h4>🎯 発表のポイント</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <li>企画書を見せながら説明</li>
+                        <li>「なぜこの企画を？」の熱意を込める</li>
+                        <li>数字は具体的に</li>
+                        <li>質問は素直に受け止める</li>
+                    </ul>
+                </div>
+                <div class="content-section">
+                    <h4>💬 聞く側の役割</h4>
+                    <ul style="font-size: clamp(0.9rem, 2vw, 1rem); text-align: left;">
+                        <li>「お客として行ってみたい？」</li>
+                        <li>「改善提案があるとしたら？」</li>
+                        <li>「一番魅力的なポイントは？」</li>
+                        <li>批判ではなく建設的意見を</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="warning-section">
+                <h4>🌟 Google Slidesでリアルタイム共有</h4>
+                <p style="text-align: left; font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                    • 企画書をスマホで撮影→Google Slidesに貼り付け<br>
+                    • 全員の企画が一覧で見られる<br>
+                    • コメント機能で追加フィードバック可能<br>
+                    • 後から見返して学習継続
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- スライド14: 第2回まとめ・次回予告 -->
+    <div class="slide">
+        <h2>🎉 第2回のまとめ</h2>
+        
+        <div class="goal-box">
+            <h3>✅ 今日達成したこと</h3>
+            <ul style="text-align: left; font-size: clamp(1rem, 2.5vw, 1.2rem);">
+                <li>第1回の自己理解を具体的な事業企画に昇華</li>
+                <li>自分ならではのサロンコンセプトを4タイプから設計</li>
+                <li>ターゲット・提供価値・差別化ポイントを明確化</li>
+                <li>現実的な収支計算・資金計画・リスク想定を体験</li>
+                <li>企画を他者に分かりやすく伝える技術を実践</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h3>🔜 次回予告：第3回「お客様の心を読む」マーケティング入門</h3>
+            <p style="text-align: left;">
+                今日作った<span class="highlight">サロン企画</span>をベースに、<br>
+                お客様のニーズ・インサイトをさらに深掘りし、<br>
+                効果的なマーケティング戦略を学びます！<br><br>
+                💡 事前課題：自分のターゲット層の人に「美容で困っていること」をヒアリングしてみてください
+            </p>
+        </div>
+
+        <div class="hint-section">
+            <h3>🏠 今日の企画をさらに深めるには</h3>
+            <ul style="text-align: left; font-size: clamp(0.9rem, 2vw, 1.1rem);">
+                <li><strong>NotebookLM活用</strong>：「私のサロン企画をもっと良くするには？」と質問</li>
+                <li><strong>市場調査</strong>：近所にある同業他店をチェック（価格・サービス・雰囲気）</li>
+                <li><strong>数字の精緻化</strong>：今日の概算をもっと具体的に調べてみる</li>
+                <li><strong>フィードバック活用</strong>：今日もらった意見を企画に反映</li>
+            </ul>
+        </div>
+
+        <p style="font-size: clamp(1.3rem, 3.5vw, 2rem); color: #e74c3c; margin-top: 20px;">
+            <strong>🌟 自分らしい事業企画の完成！<br>次はマーケティングで集客力UP！🌟</strong>
+        </p>
+    </div>
+</body>
+</html>
