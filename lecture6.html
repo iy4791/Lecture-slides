@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第6回：お客様との関係づくり</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Meiryo', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .slide {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 20px 0;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b9d, #c44569);
+        }
+        h1 {
+            color: #c44569;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 3px solid #ff6b9d;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #c44569;
+            font-size: 1.8em;
+            margin: 25px 0 15px 0;
+            border-left: 5px solid #ff6b9d;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #8b3a62;
+            font-size: 1.4em;
+            margin: 20px 0 10px 0;
+        }
+        .highlight {
+            background: linear-gradient(135deg, #ff6b9d, #c44569);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .box {
+            background: #ffeef7;
+            border: 2px solid #ff6b9d;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        .sns-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .sns-box {
+            background: #fff0f5;
+            border: 2px solid #ff6b9d;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            min-height: 150px;
+        }
+        .customer-journey {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .journey-step {
+            background: #ffeef7;
+            border: 2px solid #ff6b9d;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        .persona-box {
+            background: #fff0f5;
+            border: 2px solid #ff6b9d;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        .chart {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .last-method {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .last-box {
+            background: #fff0f5;
+            border: 2px solid #ff6b9d;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 10px; }
+            .slide { padding: 20px; }
+            h1 { font-size: 1.8em; }
+            h2 { font-size: 1.5em; }
+            .sns-grid, .customer-journey, .last-method { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- タイトルスライド -->
+        <div class="slide">
+            <h1>第6回：お客様との関係づくり</h1>
+            <div class="highlight">
+                SNS戦略企画＆ケーススタディ（60分短縮版）
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <p style="font-size: 1.2em; color: #666;">技術力×関係性で選ばれるサロンになる</p>
+            </div>
+        </div>
+
+        <!-- 学習目標 -->
+        <div class="slide">
+            <h2>今回の学習目標</h2>
+            <div class="box">
+                <h3>1. 美容業界特有の顧客関係の理解</h3>
+                <p>高い信頼性要求・パーソナルな関係性・感情的価値の重要性</p>
+            </div>
+            <div class="box">
+                <h3>2. SNSマーケティング戦略の習得</h3>
+                <p>Instagram・LINE・TikTok各プラットフォームの活用法</p>
+            </div>
+            <div class="box">
+                <h3>3. 顧客体験（CX）設計のスキル</h3>
+                <p>カスタマージャーニーマップと感情体験の設計</p>
+            </div>
+            <div class="box">
+                <h3>4. クレーム対応とリカバリー技術</h3>
+                <p>LAST法とリカバリー・パラドックスの活用</p>
+            </div>
+        </div>
+
+        <!-- 美容業界の顧客関係特徴 -->
+        <div class="slide">
+            <h2>美容業界特有の関係性</h2>
+            <div class="chart">
+                <h3>3つの信頼構築要素</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-top: 20px;">
+                    <div style="background: #ffeef7; padding: 15px; border-radius: 10px;">
+                        <h4 style="color: #c44569;">技術的信頼</h4>
+                        <p>「この人なら安心して任せられる」</p>
+                    </div>
+                    <div style="background: #ffeef7; padding: 15px; border-radius: 10px;">
+                        <h4 style="color: #c44569;">人間的信頼</h4>
+                        <p>「この人は私のことを理解してくれる」</p>
+                    </div>
+                    <div style="background: #ffeef7; padding: 15px; border-radius: 10px;">
+                        <h4 style="color: #c44569;">継続的信頼</h4>
+                        <p>「この人となら長く付き合いたい」</p>
+                    </div>
+                </div>
+            </div>
+            <div class="highlight">
+                機能的価値（技術）+ 感情的価値（体験）= 総合満足度
+            </div>
+        </div>
+
+        <!-- 顧客ライフサイクル -->
+        <div class="slide">
+            <h2>顧客ライフサイクル戦略</h2>
+            <div class="customer-journey">
+                <div class="journey-step">
+                    <h4 style="color: #c44569;">認知段階</h4>
+                    <p><strong>目標：</strong>存在を知ってもらう</p>
+                    <p><strong>手段：</strong>SNS、口コミ、Web検索</p>
+                    <p><strong>指標：</strong>リーチ数、インプレッション</p>
+                </div>
+                <div class="journey-step">
+                    <h4 style="color: #c44569;">検討段階</h4>
+                    <p><strong>目標：</strong>選択肢に入る</p>
+                    <p><strong>手段：</strong>ポートフォリオ、口コミ</p>
+                    <p><strong>指標：</strong>問い合わせ数、予約率</p>
+                </div>
+                <div class="journey-step">
+                    <h4 style="color: #c44569;">初回体験</h4>
+                    <p><strong>目標：</strong>期待を上回る体験</p>
+                    <p><strong>手段：</strong>丁寧なカウンセリング</p>
+                    <p><strong>指標：</strong>満足度、次回予約率</p>
+                </div>
+            </div>
+            <div class="customer-journey">
+                <div class="journey-step">
+                    <h4 style="color: #c44569;">リピート段階</h4>
+                    <p><strong>目標：</strong>継続的な関係構築</p>
+                    <p><strong>手段：</strong>アフターフォロー、特別感</p>
+                    <p><strong>指標：</strong>リピート率、来店頻度</p>
+                </div>
+                <div class="journey-step">
+                    <h4 style="color: #c44569;">推奨段階</h4>
+                    <p><strong>目標：</strong>口コミ・紹介の獲得</p>
+                    <p><strong>手段：</strong>感動体験、紹介特典</p>
+                    <p><strong>指標：</strong>紹介数、UGC</p>
+                </div>
+                <div class="journey-step">
+                    <h4 style="color: #c44569;">カスタマージャーニー</h4>
+                    <p><strong>事前：</strong>SNS発見→Web検索→予約</p>
+                    <p><strong>当日：</strong>来店→施術→会計→退店</p>
+                    <p><strong>事後：</strong>アフターケア→次回提案</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SNSプラットフォーム戦略 -->
+        <div class="slide">
+            <h2>SNSプラットフォーム別戦略</h2>
+            <div class="sns-grid">
+                <div class="sns-box">
+                    <h4 style="color: #c44569;">Instagram戦略</h4>
+                    <p><strong>目的：</strong>ブランド認知・新規獲得</p>
+                    <p><strong>コンテンツ比率：</strong></p>
+                    <ul style="text-align: left; font-size: 0.9em;">
+                        <li>技術投稿 40%</li>
+                        <li>教育投稿 30%</li>
+                        <li>エンタメ投稿 20%</li>
+                        <li>セールス投稿 10%</li>
+                    </ul>
+                </div>
+                <div class="sns-box">
+                    <h4 style="color: #c44569;">LINE公式戦略</h4>
+                    <p><strong>目的：</strong>顧客維持・リピート促進</p>
+                    <p><strong>機能活用：</strong></p>
+                    <ul style="text-align: left; font-size: 0.9em;">
+                        <li>24時間予約受付</li>
+                        <li>セグメント配信</li>
+                        <li>リッチメニュー</li>
+                        <li>個別関係構築</li>
+                    </ul>
+                </div>
+                <div class="sns-box">
+                    <h4 style="color: #c44569;">TikTok戦略</h4>
+                    <p><strong>目的：</strong>若年層リーチ・バイラル効果</p>
+                    <p><strong>成功パターン：</strong></p>
+                    <ul style="text-align: left; font-size: 0.9em;">
+                        <li>満足度MAX系</li>
+                        <li>技術解説系</li>
+                        <li>ASMR系</li>
+                        <li>プロセス重視</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ハッシュタグ戦略 -->
+        <div class="slide">
+            <h2>ハッシュタグ戦略</h2>
+            <div class="box">
+                <h3>4段階のハッシュタグ設計</h3>
+                <ul>
+                    <li><strong>大分類（10万以上）：</strong>#ネイル #ジェルネイル #ネイルデザイン</li>
+                    <li><strong>中分類（1-10万）：</strong>#大阪ネイル #オフィスネイル #ブライダルネイル</li>
+                    <li><strong>小分類（1000-1万）：</strong>#梅田ネイルサロン #ワンカラーネイル</li>
+                    <li><strong>独自タグ（100以下）：</strong>#サロン名 #オリジナルメニュー名</li>
+                </ul>
+            </div>
+            <div class="chart">
+                <h3>HEART法によるコンテンツ企画</h3>
+                <p><strong>H</strong>elpful（役立つ）+ <strong>E</strong>motional（感情的）+ <strong>A</strong>uthentic（本物）+ <strong>R</strong>elevant（関連性）+ <strong>T</strong>imely（タイムリー）</p>
+            </div>
+        </div>
+
+        <!-- 顧客セグメンテーション -->
+        <div class="slide">
+            <h2>ペルソナ別関係構築戦略</h2>
+            <div class="persona-box">
+                <h4 style="color: #c44569;">20代前半（学生・新社会人）</h4>
+                <p><strong>特徴：</strong>SNS活用頻度高・価格感度高・トレンド敏感</p>
+                <p><strong>戦略：</strong>Instagram/TikTok重視・学割設定・最新デザイン導入</p>
+            </div>
+            <div class="persona-box">
+                <h4 style="color: #c44569;">20代後半-30代（OL・既婚女性）</h4>
+                <p><strong>特徴：</strong>品質重視・時間効率重視・実用性と美しさのバランス</p>
+                <p><strong>戦略：</strong>技術力アピール・短時間メニュー・オフィス対応デザイン</p>
+            </div>
+            <div class="persona-box">
+                <h4 style="color: #c44569;">40代以上（主婦・管理職）</h4>
+                <p><strong>特徴：</strong>上質体験重視・人間関係重視・経済的余裕</p>
+                <p><strong>戦略：</strong>プレミアムサービス・個人的会話重視・総合ケア提案</p>
+            </div>
+        </div>
+
+        <!-- ロイヤルティプログラム -->
+        <div class="slide">
+            <h2>ロイヤルティプログラム設計</h2>
+            <div class="chart">
+                <h3>段階的特典システム</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-top: 20px;">
+                    <div style="background: #ffeef7; padding: 15px; border-radius: 10px;">
+                        <h4 style="color: #c44569;">ブロンズ（3回以上）</h4>
+                        <ul style="font-size: 0.9em;">
+                            <li>5%割引</li>
+                            <li>誕生日特典</li>
+                            <li>予約優先権</li>
+                        </ul>
+                    </div>
+                    <div style="background: #ffeef7; padding: 15px; border-radius: 10px;">
+                        <h4 style="color: #c44569;">シルバー（10回以上）</h4>
+                        <ul style="font-size: 0.9em;">
+                            <li>10%割引</li>
+                            <li>限定メニュー</li>
+                            <li>無料ケアサービス</li>
+                        </ul>
+                    </div>
+                    <div style="background: #ffeef7; padding: 15px; border-radius: 10px;">
+                        <h4 style="color: #c44569;">ゴールド（20回以上）</h4>
+                        <ul style="font-size: 0.9em;">
+                            <li>15%割引</li>
+                            <li>VIP予約枠</li>
+                            <li>新メニュー先行体験</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- クレーム対応LAST法 -->
+        <div class="slide">
+            <h2>クレーム対応：LAST法</h2>
+            <div class="last-method">
+                <div class="last-box">
+                    <h4 style="color: #c44569;">Listen<br>（傾聴）</h4>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>最後まで話を聞く</li>
+                        <li>感情的にならず事実把握</li>
+                        <li>メモを取り真剣に聞く</li>
+                    </ul>
+                </div>
+                <div class="last-box">
+                    <h4 style="color: #c44569;">Apologize<br>（謝罪）</h4>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>不快な思いへの謝罪</li>
+                        <li>責任所在は後で明確化</li>
+                        <li>心からの謝罪</li>
+                    </ul>
+                </div>
+                <div class="last-box">
+                    <h4 style="color: #c44569;">Solve<br>（解決）</h4>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>具体的解決策提示</li>
+                        <li>お客様立場の提案</li>
+                        <li>可能な範囲の最大対応</li>
+                    </ul>
+                </div>
+                <div class="last-box">
+                    <h4 style="color: #c44569;">Thank<br>（感謝）</h4>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>貴重な意見として感謝</li>
+                        <li>改善機会への感謝</li>
+                        <li>今後の利用希望を伝達</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight">
+                リカバリー・パラドックス：適切な対応でクレーム前より高い満足度を実現
+            </div>
+        </div>
+
+        <!-- KPI設定 -->
+        <div class="slide">
+            <h2>効果測定とKPI設定</h2>
+            <div class="box">
+                <h3>定量指標</h3>
+                <ul>
+                    <li><strong>顧客獲得：</strong>新規顧客数/月、獲得経路別内訳、CAC（顧客獲得コスト）</li>
+                    <li><strong>顧客維持：</strong>リピート率、平均来店間隔、LTV（顧客生涯価値）</li>
+                    <li><strong>エンゲージメント：</strong>SNSフォロワー数、エンゲージメント率、UGC数</li>
+                </ul>
+            </div>
+            <div class="box">
+                <h3>定性指標</h3>
+                <ul>
+                    <li><strong>満足度：</strong>NPS（Net Promoter Score）、口コミサイト評価、紹介数</li>
+                    <li><strong>関係性：</strong>スタッフ指名率、特別メニュー利用率、イベント参加率</li>
+                </ul>
+            </div>
+            <div class="chart">
+                <h3>SMART目標設定例</h3>
+                <p>「6ヶ月以内に、Instagramフォロワー数を500人から2,000人に増加させ、月間新規顧客の30%をSNS経由で獲得する」</p>
+            </div>
+        </div>
+
+        <!-- まとめ -->
+        <div class="slide">
+            <h2>第6回まとめ</h2>
+            <div class="highlight">
+                技術力×関係性×SNS活用 = 選ばれ続けるサロン
+            </div>
+            <div class="box">
+                <h3>身につけた関係構築力</h3>
+                <ul>
+                    <li><strong>顧客視点：</strong>お客様の立場で体験を設計する力</li>
+                    <li><strong>デジタル活用：</strong>SNSを効果的に使いこなす力</li>
+                    <li><strong>コミュニケーション：</strong>様々な状況で適切に対応する力</li>
+                    <li><strong>継続改善：</strong>データを基に関係性を深化させる力</li>
+                </ul>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <p style="font-size: 1.2em; color: #c44569; font-weight: bold;">
+                    次回：第7回「未来の自分」で全体統合と発表会を行います
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

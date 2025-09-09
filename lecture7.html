@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第7回：未来の自分</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Meiryo', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .slide {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 20px 0;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #f6d365, #ff8a00);
+        }
+        h1 {
+            color: #e67e22;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 3px solid #f39c12;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #e67e22;
+            font-size: 1.8em;
+            margin: 25px 0 15px 0;
+            border-left: 5px solid #f39c12;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #d35400;
+            font-size: 1.4em;
+            margin: 20px 0 10px 0;
+        }
+        .highlight {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .box {
+            background: #fef9e7;
+            border: 2px solid #f39c12;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        .integration-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .integration-box {
+            background: #fff3e0;
+            border: 2px solid #f39c12;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            min-height: 120px;
+        }
+        .career-path {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .path-box {
+            background: #fff3e0;
+            border: 2px solid #f39c12;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .timeline {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .timeline-item {
+            background: #fff3e0;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        .prep-framework {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .prep-box {
+            background: #fff3e0;
+            border: 2px solid #f39c12;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        .learning-resources {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .resource-box {
+            background: #fff3e0;
+            border: 2px solid #f39c12;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        .success-statement {
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 10px; }
+            .slide { padding: 20px; }
+            h1 { font-size: 1.8em; }
+            h2 { font-size: 1.5em; }
+            .integration-grid, .career-path, .prep-framework, .learning-resources { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- タイトルスライド -->
+        <div class="slide">
+            <h1>第7回：未来の自分</h1>
+            <div class="highlight">
+                統合・発表・キャリアデザイン（90分）
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <p style="font-size: 1.2em; color: #666;">プログラム最終回：学習の統合と将来設計</p>
+            </div>
+        </div>
+
+        <!-- 学習目標 -->
+        <div class="slide">
+            <h2>最終回の学習目標</h2>
+            <div class="box">
+                <h3>1. 学習内容の統合</h3>
+                <p>第4-6回の学習成果を体系的な力に変換し、一貫性を確認する</p>
+            </div>
+            <div class="box">
+                <h3>2. 発表力の向上</h3>
+                <p>PREP法とストーリーテリングを活用した効果的なプレゼンテーション</p>
+            </div>
+            <div class="box">
+                <h3>3. キャリアビジョンの明確化</h3>
+                <p>美容業界での多様なキャリアパスを理解し、3年後の目標を設定</p>
+            </div>
+            <div class="box">
+                <h3>4. 継続学習の基盤構築</h3>
+                <p>卒業後も成長し続けるための学習戦略とネットワーク構築</p>
+            </div>
+        </div>
+
+        <!-- 学習統合フレームワーク -->
+        <div class="slide">
+            <h2>第4-6回の学習成果統合</h2>
+            <div class="integration-grid">
+                <div class="integration-box">
+                    <h4 style="color: #e67e22;">第4回：ブランディング</h4>
+                    <p><strong>学習内容：</strong></p>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>競合分析手法</li>
+                        <li>差別化ポイント発見</li>
+                        <li>ブランドコンセプト構築</li>
+                        <li>キャッチフレーズ作成</li>
+                    </ul>
+                </div>
+                <div class="integration-box">
+                    <h4 style="color: #e67e22;">第5回：数字・経営計算</h4>
+                    <p><strong>学習内容：</strong></p>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>売上・利益・所得概念</li>
+                        <li>損益分岐点分析</li>
+                        <li>税務・経費基礎</li>
+                        <li>投資判断考え方</li>
+                    </ul>
+                </div>
+                <div class="integration-box">
+                    <h4 style="color: #e67e22;">第6回：関係づくり</h4>
+                    <p><strong>学習内容：</strong></p>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>顧客体験設計</li>
+                        <li>SNSプラットフォーム活用</li>
+                        <li>関係構築重要性</li>
+                        <li>クレーム対応スキル</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box">
+                <h3>一貫性チェックポイント</h3>
+                <ul>
+                    <li>ターゲット客層とSNS戦略が一致しているか</li>
+                    <li>ブランドコンセプトと価格設定が整合しているか</li>
+                    <li>売上目標と集客戦略が現実的か</li>
+                    <li>差別化ポイントが全体を通じて表現されているか</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- プレゼンテーション技術 -->
+        <div class="slide">
+            <h2>効果的な発表構成：PREP法</h2>
+            <div class="prep-framework">
+                <div class="prep-box">
+                    <h4 style="color: #e67e22;">Point<br>（結論）</h4>
+                    <p>私たちのサロンは成功します</p>
+                </div>
+                <div class="prep-box">
+                    <h4 style="color: #e67e22;">Reason<br>（理由）</h4>
+                    <p>忙しい現代女性が求める価値を提供するから</p>
+                </div>
+                <div class="prep-box">
+                    <h4 style="color: #e67e22;">Example<br>（例）</h4>
+                    <p>具体的な戦略とその根拠</p>
+                </div>
+                <div class="prep-box">
+                    <h4 style="color: #e67e22;">Point<br>（結論）</h4>
+                    <p>だから選ばれ続けるサロンになれます</p>
+                </div>
+            </div>
+            <div class="box">
+                <h3>ストーリーテリング構造</h3>
+                <ol>
+                    <li><strong>現状認識：</strong>なぜこのサロンが必要なのか</li>
+                    <li><strong>課題設定：</strong>どんな問題を解決するのか</li>
+                    <li><strong>解決策提示：</strong>私たちのアプローチは何か</li>
+                    <li><strong>成功イメージ：</strong>どんな未来を実現するのか</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- 美容業界キャリアパス -->
+        <div class="slide">
+            <h2>美容業界でのキャリアパス</h2>
+            <div class="career-path">
+                <div class="path-box">
+                    <h4 style="color: #e67e22;">就職→管理職ルート</h4>
+                    <p><strong>ステップ：</strong></p>
+                    <p>新人→中堅→店長→エリアマネージャー</p>
+                    <p><strong>経営知識活用：</strong></p>
+                    <p>数字管理・マーケティング・人材育成</p>
+                </div>
+                <div class="path-box">
+                    <h4 style="color: #e67e22;">独立開業ルート</h4>
+                    <p><strong>準備フェーズ：</strong></p>
+                    <p>スキル習得→経験蓄積→独立準備→開業</p>
+                    <p><strong>経営知識活用：</strong></p>
+                    <p>事業計画・資金調達・ブランディング</p>
+                </div>
+                <div class="path-box">
+                    <h4 style="color: #e67e22;">フリーランスルート</h4>
+                    <p><strong>発展パターン：</strong></p>
+                    <p>基礎習得→個人ブランド→複数拠点→教育事業</p>
+                    <p><strong>経営知識活用：</strong></p>
+                    <p>収支管理・セルフブランディング・価格設定</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3年後目標設定 -->
+        <div class="slide">
+            <h2>3年後の目標設定：SMART法</h2>
+            <div class="box">
+                <h3>SMART目標設定の要素</h3>
+                <ul>
+                    <li><strong>Specific（具体的）：</strong>曖昧でない明確な目標</li>
+                    <li><strong>Measurable（測定可能）：</strong>数値で測定できる</li>
+                    <li><strong>Achievable（達成可能）：</strong>現実的に達成可能</li>
+                    <li><strong>Relevant（関連性）：</strong>自分の価値観と関連</li>
+                    <li><strong>Time-bound（期限）：</strong>明確な期限設定</li>
+                </ul>
+            </div>
+            <div class="timeline">
+                <h3>目標設定例</h3>
+                <div class="timeline-item">
+                    <h4 style="color: #e67e22;">就職志向の場合</h4>
+                    <p>「3年後に店長として年収400万円を達成し、月間売上200万円の店舗を黒字経営する」</p>
+                </div>
+                <div class="timeline-item">
+                    <h4 style="color: #e67e22;">独立志向の場合</h4>
+                    <p>「3年後に個人サロンを開業し、月間純利益30万円を安定的に確保する」</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 継続学習戦略 -->
+        <div class="slide">
+            <h2>継続学習の戦略</h2>
+            <div class="learning-resources">
+                <div class="resource-box">
+                    <h4 style="color: #e67e22;">基礎レベル（在学中）</h4>
+                    <ul style="font-size: 0.9em;">
+                        <li>書籍：経営・マーケティング入門</li>
+                        <li>YouTube：業界チャンネル</li>
+                        <li>実践：アルバイト先での観察</li>
+                    </ul>
+                </div>
+                <div class="resource-box">
+                    <h4 style="color: #e67e22;">中級レベル（就職1-3年）</h4>
+                    <ul style="font-size: 0.9em;">
+                        <li>資格：簿記3級、販売士</li>
+                        <li>セミナー：業界勉強会</li>
+                        <li>ネットワーキング：同業者交流</li>
+                    </ul>
+                </div>
+                <div class="resource-box">
+                    <h4 style="color: #e67e22;">上級レベル（管理職・独立準備）</h4>
+                    <ul style="font-size: 0.9em;">
+                        <li>MBA・ビジネススクール</li>
+                        <li>コンサルティング</li>
+                        <li>海外研修</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 業界ネットワーク構築 -->
+        <div class="slide">
+            <h2>業界ネットワークの構築</h2>
+            <div class="box">
+                <h3>美容業界の特徴</h3>
+                <ul>
+                    <li>人的ネットワークが重要</li>
+                    <li>口コミ・紹介の影響大</li>
+                    <li>技術・情報の共有文化</li>
+                </ul>
+            </div>
+            <div class="integration-grid">
+                <div class="integration-box">
+                    <h4 style="color: #e67e22;">SNS活用</h4>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>LinkedIn：プロネットワーク</li>
+                        <li>Instagram：ポートフォリオ</li>
+                        <li>Twitter：業界情報交換</li>
+                    </ul>
+                </div>
+                <div class="integration-box">
+                    <h4 style="color: #e67e22;">リアルな場</h4>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>業界展示会・見本市</li>
+                        <li>勉強会・セミナー</li>
+                        <li>異業種交流会</li>
+                    </ul>
+                </div>
+                <div class="integration-box">
+                    <h4 style="color: #e67e22;">関係構築対象</h4>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>同期・同窓生</li>
+                        <li>先輩・指導者</li>
+                        <li>同業者・関連業界</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 振り返りと改善サイクル -->
+        <div class="slide">
+            <h2>振り返りと改善のPDCAサイクル</h2>
+            <div class="prep-framework">
+                <div class="prep-box">
+                    <h4 style="color: #e67e22;">Plan<br>（計画）</h4>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>具体的学習計画</li>
+                        <li>期限・方法設定</li>
+                    </ul>
+                </div>
+                <div class="prep-box">
+                    <h4 style="color: #e67e22;">Do<br>（実行）</h4>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>計画に基づく実践</li>
+                        <li>記録・データ蓄積</li>
+                    </ul>
+                </div>
+                <div class="prep-box">
+                    <h4 style="color: #e67e22;">Check<br>（評価）</h4>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>成果の測定・分析</li>
+                        <li>問題点の洗い出し</li>
+                    </ul>
+                </div>
+                <div class="prep-box">
+                    <h4 style="color: #e67e22;">Action<br>（改善）</h4>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>改善策の実施</li>
+                        <li>次サイクルへの反映</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box">
+                <h3>定期的振り返りの頻度</h3>
+                <ul>
+                    <li><strong>月次：</strong>目標達成度確認・学習内容整理・次月計画修正</li>
+                    <li><strong>四半期：</strong>中期目標進捗・学習方向性見直し・ネットワーク拡大</li>
+                    <li><strong>年次：</strong>年間目標総括・キャリアプラン修正・次年度計画策定</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 就職活動での差別化 -->
+        <div class="slide">
+            <h2>就職活動での経営知識活用</h2>
+            <div class="box">
+                <h3>面接でのアピール例</h3>
+                <p>「私は在学中に経営の基礎を学び、サロンの売上構造や顧客関係の重要性を理解しています。入社後は技術習得と並行して、店舗運営にも貢献したいと考えています」</p>
+            </div>
+            <div class="integration-grid">
+                <div class="integration-box">
+                    <h4 style="color: #e67e22;">具体的アピールポイント</h4>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>数字に基づく改善提案ができる</li>
+                        <li>お客様の立場で施策を考えられる</li>
+                        <li>将来的な店舗管理も見据えている</li>
+                    </ul>
+                </div>
+                <div class="integration-box">
+                    <h4 style="color: #e67e22;">職場での活躍要素</h4>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>自分の売上・生産性把握</li>
+                        <li>お客様のリピート率意識</li>
+                        <li>改善アイデアの積極提案</li>
+                    </ul>
+                </div>
+                <div class="integration-box">
+                    <h4 style="color: #e67e22;">昇進・昇格への影響</h4>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>経営視点を持った人材評価</li>
+                        <li>店長候補としての早期抜擢</li>
+                        <li>新規事業への参画機会</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- プログラムの長期的価値 -->
+        <div class="slide">
+            <h2>学習の長期的価値</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4 style="color: #e67e22;">短期（卒業まで）</h4>
+                    <ul>
+                        <li>就職活動での差別化</li>
+                        <li>在学中の実践機会創出</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h4 style="color: #e67e22;">中期（卒業後3-5年）</h4>
+                    <ul>
+                        <li>職場での早期活躍</li>
+                        <li>昇進・昇格の加速</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h4 style="color: #e67e22;">長期（将来）</h4>
+                    <ul>
+                        <li>独立・起業の基盤</li>
+                        <li>業界リーダーとしての地位</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 発表準備のポイント -->
+        <div class="slide">
+            <h2>発表準備のポイント</h2>
+            <div class="box">
+                <h3>発表前の準備チェックリスト</h3>
+                <ul>
+                    <li><strong>内容の整理：</strong>第4-6回の成果物を時系列で整理し、関連性を明確化</li>
+                    <li><strong>ストーリー構成：</strong>PREP法に基づいた論理的な流れを作成</li>
+                    <li><strong>数字の準備：</strong>売上目標・客数・利益率などの根拠となる計算を確認</li>
+                    <li><strong>質疑応答対策：</strong>予想される質問とその回答を事前に準備</li>
+                </ul>
+            </div>
+            <div class="integration-grid">
+                <div class="integration-box">
+                    <h4 style="color: #e67e22;">時間配分</h4>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>導入：1分</li>
+                        <li>メイン内容：5分</li>
+                        <li>まとめ：1分</li>
+                        <li>質疑応答：3分</li>
+                    </ul>
+                </div>
+                <div class="integration-box">
+                    <h4 style="color: #e67e22;">資料準備</h4>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>発表用メモ（箇条書き）</li>
+                        <li>第4-6回のワークシート</li>
+                        <li>数字計算の根拠資料</li>
+                        <li>ビジュアル素材（図・写真）</li>
+                    </ul>
+                </div>
+                <div class="integration-box">
+                    <h4 style="color: #e67e22;">チーム連携</h4>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>役割分担の明確化</li>
+                        <li>発表順序の決定</li>
+                        <li>つなぎの部分の練習</li>
+                        <li>時間管理担当の設定</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- プレゼンテーション実践テクニック -->
+        <div class="slide">
+            <h2>プレゼンテーション実践テクニック</h2>
+            <div class="box">
+                <h3>効果的な話し方</h3>
+                <ul>
+                    <li><strong>アイコンタクト：</strong>聞き手全体を見回しながら話す</li>
+                    <li><strong>声のトーン：</strong>重要な部分では声を大きく、速度を落とす</li>
+                    <li><strong>間の取り方：</strong>ポイントの前後で適切な間を入れる</li>
+                    <li><strong>ジェスチャー：</strong>自然な手の動きで内容を補強</li>
+                </ul>
+            </div>
+            <div class="prep-framework">
+                <div class="prep-box">
+                    <h4 style="color: #e67e22;">導入のコツ</h4>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>チーム名・メンバー紹介</li>
+                        <li>サロンコンセプトを一言で</li>
+                        <li>聞き手の関心を引く問いかけ</li>
+                    </ul>
+                </div>
+                <div class="prep-box">
+                    <h4 style="color: #e67e22;">本編のコツ</h4>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>具体例を多用する</li>
+                        <li>数字は視覚的に提示</li>
+                        <li>競合との違いを明確に</li>
+                    </ul>
+                </div>
+                <div class="prep-box">
+                    <h4 style="color: #e67e22;">まとめのコツ</h4>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>核心メッセージを再確認</li>
+                        <li>実現可能性を強調</li>
+                        <li>聞き手への感謝表現</li>
+                    </ul>
+                </div>
+                <div class="prep-box">
+                    <h4 style="color: #e67e22;">質疑応答のコツ</h4>
+                    <ul style="font-size: 0.9em; text-align: left;">
+                        <li>質問を復唱して確認</li>
+                        <li>分からない時は素直に答える</li>
+                        <li>根拠を示して回答</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box">
+                <h3>よくある質問への準備</h3>
+                <ul>
+                    <li><strong>「本当にその価格で利益が出るの？」</strong>→ 材料費・人件費の詳細計算を準備</li>
+                    <li><strong>「競合店が真似したらどうするの？」</strong>→ 継続的な差別化要素を説明</li>
+                    <li><strong>「そのターゲットは本当に来店するの？」</strong>→ 市場調査結果や類似事例を提示</li>
+                    <li><strong>「SNS戦略の効果は測定できるの？」</strong>→ 具体的なKPI設定を説明</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 最終メッセージ -->
+        <div class="slide">
+            <h2>最終メッセージ</h2>
+            <div class="success-statement">
+                あなたの未来は、今日の選択から始まる
+            </div>
+            <div class="box">
+                <h3>この7回で身につけた力</h3>
+                <ol>
+                    <li><strong>統合力：</strong>バラバラの知識を体系的な力に変換</li>
+                    <li><strong>発表力：</strong>自分の考えを相手に分かりやすく伝える</li>
+                    <li><strong>計画力：</strong>具体的で実現可能なキャリアプランの作成</li>
+                    <li><strong>継続意欲：</strong>学習を続けるモチベーションと方法の獲得</li>
+                </ol>
+            </div>
+            <div class="highlight">
+                美容業界の未来を創るのは、あなたです
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <p style="font-size: 1.2em; color: #e67e22; font-weight: bold;">
+                    素晴らしい未来に向かって、一歩ずつ歩んでいきましょう
+                </p>
+                <p style="font-size: 1.1em; color: #666; margin-top: 15px;">
+                    継続学習と実践を通じて、さらなる成長を目指してください
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
