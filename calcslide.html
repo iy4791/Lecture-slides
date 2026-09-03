@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>手取り計算機 ｜ PRODUCE LAB</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#EFEDE6;--panel:#F8F7F2;--ink:#1A1E19;--ink2:#4A524A;--ink3:#7E857D;
+ --rule:#C4C1B6;--brand:#A32A45;--mkt:#1F4E86;--acct:#1F6B4E;--gold:#8A6A1C;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);
+ font-family:"Zen Kaku Gothic New",system-ui,-apple-system,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+ font-size:16px;line-height:1.7;-webkit-text-size-adjust:100%}
+.serif,h1,h2{font-family:"Shippori Mincho B1",serif;font-weight:700;line-height:1.35}
+.wrap{max-width:620px;margin:0 auto;padding:22px 18px 60px}
+header{border-bottom:2px solid var(--ink);padding-bottom:12px;margin-bottom:20px}
+.kick{font-size:12px;letter-spacing:.16em;color:var(--gold);font-weight:700}
+h1{font-size:26px;margin-top:4px}
+.sub{font-size:14px;color:var(--ink2);margin-top:8px}
+h2{font-size:17px;margin:26px 0 10px;border-left:4px solid var(--gold);padding-left:11px}
+label{display:block;font-size:13.5px;color:var(--ink2);margin:14px 0 5px;font-weight:500}
+label .hint{color:var(--ink3);font-size:12px;font-weight:400}
+input[type=number],input[type=text],select{width:100%;background:#fff;border:1.5px solid var(--rule);
+ padding:13px 12px;font-size:17px;font-family:inherit;color:var(--ink);border-radius:0;
+ -moz-appearance:textfield}
+input:focus,select:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--ink)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.out{background:var(--panel);border:2px solid var(--ink);padding:18px;margin-top:24px}
+.out .big{font-family:"Shippori Mincho B1",serif;font-weight:800;font-size:38px;line-height:1.15;
+ letter-spacing:-.01em}
+.out .big.neg{color:var(--brand)}
+.out .cap{font-size:12.5px;letter-spacing:.12em;color:var(--ink3);font-weight:700}
+.bd{margin-top:16px;border-top:1px solid var(--rule);padding-top:12px}
+.bd div{display:flex;justify-content:space-between;gap:12px;font-size:14.5px;padding:5px 0;
+ border-bottom:1px solid var(--rule)}
+.bd div:last-child{border-bottom:none}
+.bd div.t{font-weight:700;font-family:"Shippori Mincho B1",serif;font-size:17px;
+ border-top:2px solid var(--ink);border-bottom:none;margin-top:6px;padding-top:9px}
+.bd .n{font-variant-numeric:tabular-nums;white-space:nowrap}
+.note{background:var(--panel);border:1px solid var(--rule);padding:13px 15px;margin-top:18px;
+ font-size:13.5px;color:var(--ink2);line-height:1.65}
+.warn{border:2px solid var(--brand);padding:13px 15px;margin-top:18px;font-size:13.5px;color:var(--ink2)}
+.warn b{color:var(--brand)}
+btn,button{font-family:inherit}
+button.copy{width:100%;margin-top:16px;background:var(--ink);color:var(--paper);border:none;
+ padding:15px;font-size:16px;font-weight:700;cursor:pointer}
+button.copy:active{opacity:.75}
+footer{margin-top:34px;padding-top:14px;border-top:1px solid var(--rule);
+ font-size:12px;color:var(--ink3);line-height:1.6}
+.tag{display:inline-block;background:var(--ink);color:var(--paper);font-size:11px;font-weight:700;
+ padding:3px 9px;letter-spacing:.06em}
+@media(max-width:420px){.row{grid-template-columns:1fr}.out .big{font-size:32px}}
+</style></head>
+<body><div class="wrap">
+<header>
+  <span class="tag">DAY 2</span>
+  <p class="kick" style="margin-top:10px">PRODUCE LAB ／ 計算ツール</p>
+  <h1>手取り計算機</h1>
+  <p class="sub">月給から、実際に手元に残る額と、会社が払っている総額を出します。</p>
+</header>
+
+<h2>入力する</h2>
+<label for="pay">月給（総支給・円）<span class="hint">　求人票に載っている額</span></label>
+<input type="number" id="pay" value="200000" min="0" step="1000" inputmode="numeric">
+
+<div class="row">
+<div>
+<label for="age">介護保険（40歳以上）</label>
+<select id="age"><option value="0">なし（40歳未満）</option><option value="1">あり（40〜64歳）</option></select>
+</div>
+<div>
+<label for="year">何年目か</label>
+<select id="year"><option value="1">1年目（住民税なし）</option><option value="2">2年目以降</option></select>
+</div>
+</div>
+
+<label for="tax">所得税（毎月の源泉徴収・円）<span class="hint">　概算。あとで直せます</span></label>
+<input type="number" id="tax" value="3000" min="0" step="100" inputmode="numeric">
+
+<label for="res">住民税（2年目以降・円）<span class="hint">　前年の所得で決まります</span></label>
+<input type="number" id="res" value="8500" min="0" step="100" inputmode="numeric">
+
+<div class="out">
+  <p class="cap">手元に残る（手取り）</p>
+  <p class="big" id="net">—</p>
+  <div class="bd" id="bd"></div>
+</div>
+
+<div class="out" style="border-color:var(--brand)">
+  <p class="cap">会社が払っている総額</p>
+  <p class="big" id="cost" style="color:var(--brand)">—</p>
+  <div class="bd" id="bd2"></div>
+</div>
+
+<button class="copy" id="cp">結果をコピーする（フォームに貼る）</button>
+
+<div class="note" id="gap"></div>
+
+<div class="warn">
+<b>業務委託だと、ここが変わります</b><br>
+上の表で「会社が負担」となっている約3万円は、業務委託では<b>全部あなたが払います</b>（国民健康保険・国民年金）。
+そのうえ、雇用保険・労災・有給・残業代・最低賃金がありません。<br>
+国民健康保険の額は住んでいる自治体で変わるので、この計算機では出せません。
+実際の額は、住んでいる市区町村の窓口かサイトで確認してください。
+</div>
+
+<footer>料率は2026年度（協会けんぽ東京・介護保険なしの場合 健康保険9.85%／厚生年金18.3%／子ども・子育て支援金0.23%／雇用保険 本人0.5%・事業主0.85%／子ども・子育て拠出金0.36%／労災 約0.3%）。
+社会保険料は実際には「標準報酬月額」の表で決まるため、この計算機の額とは数百円ずれることがあります。
+所得税は源泉徴収税額表で決まるため、ここでは概算値を入れています。住民税は前年の所得で決まります。
+料率・制度は毎年変わります。実際に働き始めるときは、必ずその年の数字を確認してください。</footer>
+</div>
+<script>
+function yen(n){return isFinite(n)?Math.round(n).toLocaleString('ja-JP'):'—';}
+function v(id){var x=parseFloat(document.getElementById(id).value);return isFinite(x)?x:0;}
+function copyOut(text,btn){
+  navigator.clipboard.writeText(text).then(function(){
+    var o=btn.textContent; btn.textContent='コピーしました';
+    setTimeout(function(){btn.textContent=o;},1600);
+  }).catch(function(){ btn.textContent='コピーできませんでした'; });
+}
+
+var R={hp:0.0985, kg:0.0163, pen:0.183, kod:0.0023, emp_self:0.005, emp_co:0.0085, kyo:0.0036, rosai:0.003};
+function calc(){
+  var pay=v('pay'), kaigo=document.getElementById('age').value==='1';
+  var y2=document.getElementById('year').value==='2';
+  var hp=pay*R.hp/2, kg=kaigo?pay*R.kg/2:0, pen=pay*R.pen/2, kod=pay*R.kod/2, emp=pay*R.emp_self;
+  var si=hp+kg+pen+kod+emp;
+  var tax=v('tax'), res=y2?v('res'):0;
+  var net=pay-si-tax-res;
+  document.getElementById('net').textContent=yen(net)+'円';
+  document.getElementById('net').className='big'+(net<0?' neg':'');
+  var rows=[['月給（総支給）',pay],['健康保険',-hp]];
+  if(kaigo) rows.push(['介護保険',-kg]);
+  rows.push(['厚生年金',-pen],['子ども・子育て支援金',-kod],['雇用保険',-emp],
+            ['社会保険料 計',-si],['所得税（概算）',-tax]);
+  if(y2) rows.push(['住民税',-res]);
+  rows.push(['手取り',net]);
+  document.getElementById('bd').innerHTML=rows.map(function(r,i){
+    var t=(i===rows.length-1)?' class="t"':'';
+    return '<div'+t+'><span>'+r[0]+'</span><span class="n">'+yen(r[1])+'円</span></div>';}).join('');
+
+  var chp=pay*R.hp/2, ckg=kaigo?pay*R.kg/2:0, cpen=pay*R.pen/2, ckod=pay*R.kod/2;
+  var cemp=pay*R.emp_co, ckyo=pay*R.kyo, cros=pay*R.rosai;
+  var co=chp+ckg+cpen+ckod+cemp+ckyo+cros, total=pay+co;
+  document.getElementById('cost').textContent=yen(total)+'円';
+  var r2=[['あなたの月給',pay],['健康保険（会社の半分）',chp]];
+  if(kaigo) r2.push(['介護保険（会社の半分）',ckg]);
+  r2.push(['厚生年金（会社の半分）',cpen],['子ども・子育て支援金（会社の半分）',ckod],
+          ['雇用保険 0.85%',cemp],['子ども・子育て拠出金 0.36%',ckyo],['労災保険',cros],
+          ['会社が払う総額',total]);
+  document.getElementById('bd2').innerHTML=r2.map(function(r,i){
+    var t=(i===r2.length-1)?' class="t"':'';
+    return '<div'+t+'><span>'+r[0]+'</span><span class="n">'+yen(r[1])+'円</span></div>';}).join('');
+
+  document.getElementById('gap').innerHTML=
+    'あなたが受け取るのは <b>'+yen(net)+'円</b>、会社が払っているのは <b>'+yen(total)+'円</b>。<br>'+
+    '差の <b>'+yen(total-net)+'円</b> は、給与明細に一行も出てきません。<br>'+
+    'だから会社が人を雇い続けられるのは、<b>その人が生む価値が '+yen(total)+'円を超えるとき</b>だけです。';
+
+  window._out='【手取り計算】月給 '+yen(pay)+'円／社会保険料 '+yen(si)+'円／所得税 '+yen(tax)+'円'+
+    (y2?('／住民税 '+yen(res)+'円'):'')+'／手取り '+yen(net)+'円／会社が払う総額 '+yen(total)+'円';
+}
+document.getElementById('cp').onclick=function(){copyOut(window._out,this);};
+
+document.addEventListener('input',calc);
+calc();
+</script>
+</body></html>
